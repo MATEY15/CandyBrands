@@ -1,0 +1,25 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www.plonq.ru$ [NC]
+RewriteRule ^(.*)$ https://plonq.ru/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !^/careers/search
+RewriteCond %{REQUEST_URI} !^/mapae
+RewriteCond %{REQUEST_URI} !^/faq
+RewriteCond %{REQUEST_URI} /([^.]+)/$ [NC]   
+RewriteRule (.+)/$ /$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !^/careers/
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_URI} !^/careers/
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+RewriteRule ^careers/search/?(.*)$ /careersApi/$1 [L]
+
+ErrorDocument 404 /404
+
+Redirect 301 /support https://plonq.ru/wholesale
+Redirect 301 /sales-map https://plonq.ru/salesmap

@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /society
+Disallow: /qr-redirect
+Disallow: /offerta
+Disallow: /map
+Disallow: /app
+Disallow: /app-iphone
+Disallow: /app-android
+Disallow: /agreement
+Disallow: /404
+Disallow: /_app
+Disallow: /cnew/
+Disallow: /*?*
+Host: https://plonq.ru
+Sitemap: https://plonq.ru/sitemap.xml

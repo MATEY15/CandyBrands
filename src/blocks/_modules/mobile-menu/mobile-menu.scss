@@ -1,0 +1,130 @@
+@import "../../_base-style/variables";
+@import "../../_base-style/media-queries";
+
+$this: '.mobile-menu';
+
+#{$this} {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: $colorBlack;
+  display: none;
+  //padding-top: 20px;
+  @include trn(.15s);
+  transform: translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+
+  @include table-large-screen {
+    display: block;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 50px 50px;
+
+    @include mobile-large-screen {
+      display: block;
+    }
+  }
+
+  &__item {
+    color: #FFFFFF;
+
+    &:not(:last-child) {
+      @include mobile-large-screen {
+        margin-bottom: 20px;
+      }
+    }
+
+    h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+  &__list {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+    li, a {
+      color: #d4d4d4;
+      font-size: 14px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+
+    @include mobile-large-screen {
+      display: block;
+    }
+  }
+
+  .search {
+
+    &__form-item {
+      position: relative;
+      min-width: 300px;
+      max-width: 300px;
+
+      @include mobile-small-screen {
+        min-width: inherit;
+        max-width: inherit;
+        width: 100%;
+      }
+    }
+
+    &__form-input {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid #FFFFFF;
+      border-radius: 8px;
+      min-height: 34px;
+      padding: 8px 12px;
+      outline: none;
+      color: #FFFFFF;
+      font-size: 14px;
+
+      @include placeholder {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+      }
+    }
+
+    &__form-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      border: none;
+      width: 34px;
+      height: 100%;
+    }
+
+  }
+
+
+  .download-katalog {
+
+    @include mobile-large-screen {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+
+}

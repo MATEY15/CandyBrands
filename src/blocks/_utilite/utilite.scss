@@ -1,0 +1,181 @@
+@import "../../blocks/_base-style/variables";
+@import "../../blocks/_base-style/media-queries";
+
+// Link Style
+
+.link-custom {
+  font-family: $mr;
+  font-size: 13px;
+  color: #323232;
+  transition: all .25s ease-out;
+  letter-spacing: -0.24px;
+
+  @include mobile-big-screen {
+    font-size: 12px;
+  }
+
+  svg {
+    margin-left: 10px;
+    transform: translate(0px, 0);
+    transition: transform .25s ease-out;
+  }
+
+  &:hover {
+    svg {
+      transform: translate(5px, 0);
+    }
+  }
+}
+
+// Accordion
+
+.accordion {
+  &__item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  &__title {
+
+  }
+  &__description {
+    display: none;
+  }
+}
+
+/* POPUP THANKS */
+
+.popup-thanks {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #FFFFFF;
+  padding: 33px 20px 26px;
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  max-width: 328px;
+  width: 100%;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+
+  @include mobile-big-screen {
+    max-width: 248px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  &__overlay {
+    background: rgba(105,117,130,.4);
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+  }
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    transition: all .2s ease-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+
+    @include mobile-big-screen {
+      top: 10px;
+      right: 10px;
+    }
+
+    svg {
+      width: 13px;
+      height: 13px;
+
+      @include mobile-big-screen {
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    font-family: $mr;
+
+    & * {
+      margin: 0;
+    }
+  }
+
+  &__head {
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 17px;
+
+    @include mobile-big-screen {
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 2px;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 21px;
+    color: rgba(21, 25, 32, 0.5);
+
+    @include mobile-big-screen {
+      font-size: 12px;
+    }
+  }
+
+}
+
+
+// BR Style
+// Example: .br-(to)-(end)
+
+.br-1024-0 {
+  display: none;
+  @include table-large-screen {
+    display: block;
+  }
+}
+
+.br-640-0 {
+  display: none;
+  @include mobile-big-screen {
+    display: block;
+  }
+}
+
+.br-media640 {
+  display: none
+}
+
+@media (max-width: 640px) {
+  .br-media640 {
+    display:block
+  }
+}

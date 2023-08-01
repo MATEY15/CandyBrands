@@ -1,0 +1,97 @@
+{% set listMenu = [
+    {
+        menu: {
+            text: 'Каталог',
+            href: "/"
+        },
+        subMenu: [
+            {
+                text: 'Новинки',
+                href: "/new"
+            },
+            {
+                text: 'Листовка',
+                href: "/new"
+            },
+            {
+                text: 'Ассортимент',
+                href: "/new"
+            }
+        ]
+    },
+    {
+        menu: {
+            text: 'Мы',
+            href: "/we"
+        },
+        subMenu: [
+            {
+                text: 'Промо ролик',
+                href: "/promo"
+            },
+            {
+                text: 'О нас',
+                href: "/about"
+            },
+            {
+                text: 'Контакты',
+                href: "/"
+            }
+        ]
+    },
+    {
+        menu: {
+            text: 'Купить',
+            href: "/"
+        },
+        subMenu: [
+            {
+                text: 'Вайберис',
+                href: "/"
+            },
+            {
+                text: 'Опт',
+                href: "/"
+            }
+        ]
+    }
+] %}
+
+<div class="mobile-menu">
+    <div class="layout">
+        <div class="mobile-menu__wrapper">
+            {% for item in listMenu %}
+                <div class="mobile-menu__item">
+                    <h4>{{ item.menu.text | safe }}</h4>
+                    <ul class="mobile-menu__list">
+                        {% for subEl in item.subMenu %}
+                            <li><a href="{{ subEl.href }}">{{ subEl.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="mobile-menu__info header__search">
+            <div class="search">
+                <form action="" class="search__form">
+                    <div class="search__form-item">
+                        <input class="search__form-input" type="text" placeholder="Поиск...">
+                        <button class="search__form-button">
+                            <svg class="icon-search" width="16px" height="16px">
+                                <use xlink:href="/img/icons/sprites.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="download-katalog">
+                <a href="#" class="download-katalog__link">
+                    <svg class="icon-download" width="18px" height="18px">
+                        <use xlink:href="/img/icons/sprites.svg#icon-download"></use>
+                    </svg>
+                    Каталог PDF
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

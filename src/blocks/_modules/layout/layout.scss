@@ -1,0 +1,29 @@
+@import "../../_base-style/variables";
+@import "../../_base-style/media-queries";
+
+.layout {
+  max-width: 1280px;
+  width: calc(100% - 40px);
+  min-width: calc(270px - 40px);
+  margin-left: auto;
+  margin-right: auto;
+
+  &--big {
+    max-width: 1220px;
+  }
+
+  &--large {
+    max-width: 1200px;
+  }
+
+  &-media {
+    width: calc(100% - 40px);
+    max-width: 1230px;
+    margin: 0 auto;
+
+    @include desktop-laptop-screen {
+      max-width: 970px;
+    }
+  }
+
+}

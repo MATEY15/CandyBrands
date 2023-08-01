@@ -1,0 +1,166 @@
+@import "../../_base-style/variables";
+@import "../../_base-style/media-queries";
+
+button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font-family: "GothamPro";
+  font-style: normal;
+  font-weight: normal;
+}
+
+$bgp: "GothamPro";
+
+.button {
+  display: inline-flex;
+  font-family: "GothamPro";
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  //min-height: 38px;
+  min-height: 40px;
+  min-width: 150px;
+  //padding: 15px 10px;
+  padding: 0 10px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: normal;
+
+  &--eco {
+    min-height: 38px;
+    height: 40px;
+    min-width: 150px;
+    width: 185px;
+    display: flex;
+    font-size: 13px;
+    line-height: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #323232;
+    border-radius: 100px;
+    // margin: 0 auto;
+    border: 1px solid #323232;
+
+    &:hover {
+      background: #f2f2f2;
+      color: #323232;
+    }
+  }
+
+  &--black {
+    min-height: auto;
+    min-width: auto;
+    width: auto;
+    height: auto;
+    padding: 18px 36px;
+    display: inline;
+    font-size: 13px;
+    line-height: 0;
+    color: #fff;
+    background: #323232;
+    border-radius: 100px;
+    font-family: $mr;
+    // margin: 0 auto;
+    border: 1px solid #323232;
+
+    &:hover {
+      background: #ffffff;
+      color: #323232;
+    }
+
+    @include desktop-laptop-screen {
+      font-size: 11px;
+      padding: 12px 24px;
+    }
+  }
+
+  &--border {
+    border: 1px solid #323232;
+    color: #323232;
+    min-width: 210px;
+    min-height: 48px;
+    border-radius: 45px;
+
+    &:hover {
+      color: #fff;
+      background: #000;
+    }
+  }
+
+  &__black-border {
+    color: #323232;
+    border: 1px solid #323232;
+    border-radius: 100px;
+
+    &:hover {
+      color: #FFFFFF;
+      background: #323232;
+    }
+  }
+
+  &--small {
+    font-size: 13px;
+    padding: 9px 10px 10px;
+    min-height: 40px;
+    min-width: 180px;
+  }
+
+  &--dark {
+    background: #323232;
+    border: 1px solid #323232;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 13px;
+    padding: 16px 36px 15px;
+
+    @include mobile-big-screen {
+      font-size: 11px;
+      padding: 18px 36px;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: #323232;
+    }
+  }
+
+  &--telegram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    line-height: 22px;
+    color: #FFFFFF;
+    width: 242px;
+    height: 48px;
+    background: #007AFF;
+    border-radius: 10px;
+
+    @include desktop-large-screen {
+      max-width: 220px;
+      font-size: 15px;
+    }
+
+    @include table-large-screen {
+      font-size: 14px;
+    }
+
+    @include table-small-screen {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+}

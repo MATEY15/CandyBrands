@@ -1,0 +1,137 @@
+{% set listMenu = [
+    {
+        menu: {
+            text: 'Каталог',
+            href: "/"
+        },
+        subMenu: [
+            {
+                text: 'Новинки',
+                href: "/new"
+            },
+            {
+                text: 'Листовка',
+                href: "/new"
+            },
+            {
+                text: 'Ассортимент',
+                href: "/new"
+            }
+        ]
+    },
+    {
+        menu: {
+            text: 'Мы',
+            href: "/we"
+        },
+        subMenu: [
+            {
+                text: 'Промо ролик',
+                href: "/promo"
+            },
+            {
+                text: 'О нас',
+                href: "/about"
+            }
+        ]
+    },
+    {
+        menu: {
+            text: 'Контакты',
+            href: "/"
+        }
+    },
+    {
+        menu: {
+            text: 'Купить',
+            href: "/"
+        },
+        subMenu: [
+            {
+                text: 'Вайберис',
+                href: "/"
+            },
+            {
+                text: 'Опт',
+                href: "/"
+            }
+        ]
+    }
+] %}
+
+<header class="header">
+    <div class="header__wrapper layout">
+        <div class="header__menu">
+            <ul class="header__menu-list">
+                {% for item in listMenu %}
+                    <li>
+                        <a href="{{ item.menu.href }}">
+                            {{ item.menu.text | safe }}
+                            {% if item.subMenu[0].text %}
+                            <span class="header__menu-arrow">
+                                <svg class="arrow-bottom" width="10px" height="7px">
+                                    <use xlink:href="/img/icons/sprites.svg#arrow-bottom"></use>
+                                </svg>
+                            </span>
+                            {% endif %}
+                        </a>
+                        {% if item.subMenu[0].text %}
+                            <div class="header__sub-menu">
+                                <ul class="header__sub-menu__list">
+                                    {% for subEl in item.subMenu %}
+                                    <li>
+                                        <a href="{{ subEl.href }}">{{ subEl.text }}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="header__logo">
+            <a class="logo" href="/">
+                <img id="main-logo" src="/img/logo.svg" alt="CandyBrands">
+                <span class="logo-icon">
+                    <svg width="29" height="14" viewBox="0 0 29 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.3197 11.2828L22.4512 7.21574L26.3197 3.14868L28.235 4.95436L26.0858 7.21574L28.235 9.47712L26.3197 11.2828Z" fill="#FCAC10"/>
+                        <path d="M2.24931 11.2828L0.333984 9.47712L2.48314 7.21574L0.333984 4.95436L2.24931 3.14868L6.11779 7.21574L2.24931 11.2828Z" fill="#FCAC10"/>
+                        <path d="M14.2849 14C10.4096 14 7.25977 10.8581 7.25977 7C7.25977 3.14195 10.413 0 14.2849 0C18.1603 0 21.3101 3.14195 21.3101 7C21.3101 10.8581 18.1603 14 14.2849 14ZM14.2849 0.544791C10.7122 0.544791 7.80651 3.44004 7.80651 7C7.80651 10.56 10.7122 13.4552 14.2849 13.4552C17.8577 13.4552 20.7634 10.56 20.7634 7C20.7634 3.44004 17.8577 0.544791 14.2849 0.544791Z" fill="#FCAC10"/>
+                        <path d="M14.2844 0.54126C14.0265 0.54126 13.7754 0.561818 13.5244 0.589228V13.4003C13.7754 13.4277 14.0265 13.4483 14.2844 13.4483C17.8606 13.4483 20.7628 10.5599 20.7628 6.99305C20.7628 3.42623 17.8606 0.54126 14.2844 0.54126Z" fill="#E5007E"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="header__search">
+            <div class="search">
+                <svg class="icon-search" width="16px" height="16px">
+                    <use xlink:href="/img/icons/sprites.svg#icon-search"></use>
+                </svg>
+            </div>
+            <div class="download-katalog">
+                <a href="#" class="download-katalog__link">
+                    <svg class="icon-download" width="18px" height="18px">
+                        <use xlink:href="/img/icons/sprites.svg#icon-download"></use>
+                    </svg>
+                    Каталог PDF
+                </a>
+            </div>
+        </div>
+        <div class="header__burger">
+            <span class="header__burger--open">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2" rx="1" fill="#FCAC10"/>
+                    <rect y="7" width="20" height="2" rx="1" fill="#FCAC10"/>
+                    <rect x="5" y="14" width="15" height="2" rx="1" fill="#FCAC10"/>
+                </svg>
+            </span>
+            <span class="header__burger--close">
+                <svg class="icon-close2" width="20px" height="20px">
+                    <use xlink:href="/img/icons/sprites.svg#icon-close2"></use>
+                </svg>
+            </span>
+        </div>
+    </div>
+    {% include "../mobile-menu/mobile-menu.html" %}
+</header>

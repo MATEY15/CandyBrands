@@ -1,0 +1,45 @@
+@import "~normalize.css/normalize.css";
+
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat-Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Montserrat-Regular/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat-Regular/Montserrat-Regular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"),
+  url("../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'GothamPro-Light';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/GothamPro-Light/GothamPro-Light.eot");
+  src: url("../fonts/GothamPro-Light/GothamPro-Light.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamPro-Light/GothamPro-Light.woff") format("woff"),
+  url("../fonts/GothamPro-Light/GothamPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'GothamPro-Medium';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/GothamPro-Medium/GothamPro-Medium.eot");
+  src: url("../fonts/GothamPro-Medium/GothamPro-Medium.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamPro-Medium/GothamPro-Medium.woff") format("woff"),
+  url("../fonts/GothamPro-Medium/GothamPro-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'GothamPro-Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/GothamPro-Bold/GothamPro-Bold.eot");
+  src: url("../fonts/GothamPro-Bold/GothamPro-Bold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamPro-Bold/GothamPro-Bold.woff") format("woff"),
+  url("../fonts/GothamPro-Bold/GothamPro-Bold.ttf") format("truetype");
+}

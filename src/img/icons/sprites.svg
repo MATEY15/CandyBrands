@@ -1,0 +1,49 @@
+<svg class="sprite-icons" xmlns="http://www.w3.org/2000/svg">
+
+    <symbol id="arrow-bottom" viewBox="0 0 10 7">
+        <title>Icon Arrow</title>
+        <!-- width="10" height="7"-->
+        <path d="M1.175 0.158203L5 3.97487L8.825 0.158203L10 1.3332L5 6.3332L0 1.3332L1.175 0.158203Z"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 14 14">
+        <title>Close Popup</title>
+        <!-- width="14" height="14" -->
+        <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z"/>
+    </symbol>
+
+    <symbol id="icon-close2" viewBox="0 0 20 20">
+        <title>Close</title>
+        <!-- width="20" height="20" -->
+        <rect width="26" height="2" rx="1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 18.3848 0)" fill="#FCAC10"></rect>
+        <rect x="1.56592" width="26" height="2" rx="1" transform="rotate(45 1.56592 0)" fill="#FCAC10"></rect>
+    </symbol>
+
+    <symbol id="icon-download" viewBox="0 0 18 18">
+        <title>Download</title>
+        <!-- width="18" height="18" -->
+        <path d="M9 13.5L3.375 7.875L4.95 6.24375L7.875 9.16875V0H10.125V9.16875L13.05 6.24375L14.625 7.875L9 13.5ZM0 18V12.375H2.25V15.75H15.75V12.375H18V18H0Z"/>
+    </symbol>
+
+    <symbol id="icon-search" viewBox="0 0 16 16">
+        <title>Search</title>
+        <!-- width="16" height="16" -->
+        <path d="M12.6266 11.5128L16 14.8855L14.8855 16L11.5128 12.6266C10.2579 13.6325 8.69706 14.1797 7.08871 14.1774C3.17574 14.1774 0 11.0017 0 7.08871C0 3.17574 3.17574 0 7.08871 0C11.0017 0 14.1774 3.17574 14.1774 7.08871C14.1797 8.69706 13.6325 10.2579 12.6266 11.5128ZM11.0466 10.9284C12.0462 9.90047 12.6044 8.52254 12.6021 7.08871C12.6021 4.04293 10.1345 1.57527 7.08871 1.57527C4.04293 1.57527 1.57527 4.04293 1.57527 7.08871C1.57527 10.1345 4.04293 12.6021 7.08871 12.6021C8.52254 12.6044 9.90047 12.0462 10.9284 11.0466L11.0466 10.9284Z" />
+    </symbol>
+
+    <symbol id="icon-copy" viewBox="0 0 16 16" fill="none">
+        <title>Copy</title>
+        <!-- width="16" height="16" -->
+        <rect x="1" y="4.25195" width="10.9843" height="10.9843" rx="1" stroke="#A7A7A7" stroke-linejoin="round"/>
+        <path d="M3.90527 2.67769L3.90527 2.09766C3.90527 1.54537 4.35299 1.09766 4.90527 1.09766H13.8896C14.4418 1.09766 14.8896 1.54537 14.8896 2.09766V11.0819C14.8896 11.6342 14.4418 12.0819 13.8896 12.0819H13.5684" stroke="#A7A7A7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-burger" viewBox="0 0 22 20" fill="none">
+        <title>Burger</title>
+        <path d="M21.0972 1H1.12354" stroke-linecap="round"/>
+        <path d="M21.0973 10L1.12354 10" stroke-linecap="round"/>
+        <path d="M21.0972 19L11.7761 19" stroke-linecap="round"/>
+
+    </symbol>
+
+</svg>

@@ -1,0 +1,55 @@
+@import "../../_base-style/variables";
+@import "../../_base-style/media-queries";
+
+.content-style {
+  h3 {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 48px;
+
+    @include desktop-large-screen {
+      font-size: 26px;
+      line-height: 37px;
+      margin-bottom: 36px;
+    }
+
+    @include table-large-screen {
+      font-size: 23px;
+      line-height: 32px;
+      margin-bottom: 26px;
+    }
+
+    @include mobile-big-screen {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 26px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 22px;
+
+    @include desktop-large-screen {
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+    @include mobile-big-screen {
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+
+      @include table-large-screen {
+        margin-bottom: 19px;
+      }
+
+      @include mobile-big-screen {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
