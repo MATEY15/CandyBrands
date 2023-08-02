@@ -1,0 +1,14 @@
+@import "../../_base-style/variables";
+@import "../../_base-style/media-queries";
+
+$this: '.heading';
+
+#{$this} {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  h1 {
+
+  }
+}

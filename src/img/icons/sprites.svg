@@ -43,7 +43,18 @@
         <path d="M21.0972 1H1.12354" stroke-linecap="round"/>
         <path d="M21.0973 10L1.12354 10" stroke-linecap="round"/>
         <path d="M21.0972 19L11.7761 19" stroke-linecap="round"/>
+    </symbol>
 
+    <symbol id="icon-arrow-rotate" viewBox="0 0 39 39">
+        <title>Arrow Rotate</title>
+        <!-- width="39" height="39" -->
+        <path d="M5.32621 38.1525L32.5769 10.9018L32.5769 35.9358L38.9138 35.9134L38.9138 0.0866279L3.08704 0.0866249L3.08704 6.40109L28.0986 6.42348L0.847864 33.6742L5.32621 38.1525Z" />
+    </symbol>
+
+    <symbol id="navigation-arrow" viewBox="0 0 24 24">
+        <title>Arrow Nav</title>
+        <!-- width="24" height="24" -->
+        <path d="M12 20L13.41 18.59L7.83 13L20 13L20 11L7.83 11L13.41 5.41L12 4L4 12L12 20Z"/>
     </symbol>
 
 </svg>

@@ -13,6 +13,16 @@
   --colorWhite: #ffffff;
   --colorBlack: #323232;
   --zoom: 1;
+
+  @include table-big-screen {
+    --zoom: .9;
+  }
+  @include mobile-big-screen {
+    --zoom: .8;
+  }
+  @include mobile-small-screen {
+    --zoom: .75;
+  }
 }
 
 html {
@@ -27,6 +37,7 @@ body {
   min-height: 100vh;
   font-family: $mr;
   font-size: 14px;
+  line-height: 150%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow: none;
@@ -57,13 +68,39 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $mr;
+  font-family: $br;
   font-weight: normal;
+  line-height: normal;
   margin: 0;
 }
 
+h1, .h1-style {
+  font-size: 68px;
+  letter-spacing: .7px;
+  line-height: 138%;
+}
+
+h2, .h2-style {
+  font-size: zoom(56px);
+  letter-spacing: 0.56px;
+  line-height: 140%;
+
+  @include table-big-screen {
+    //font-size: 52px;
+  }
+}
+
+p {
+  line-height: 145%;
+  color: $colorBlack;
+}
+
+.brodway-font {
+  font-family: $br;
+}
+
 strong, .strong {
-  font-family: $gpm;
+  font-family: $mrm;
   font-weight: normal;
 }
 
@@ -91,4 +128,11 @@ img {
 
 .html-overflow {
   overflow: hidden;
+}
+
+// Icons
+
+.navigation-arrow,
+.icon-arrow-rotate {
+  fill: $colorBlack;
 }

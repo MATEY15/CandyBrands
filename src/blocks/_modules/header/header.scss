@@ -30,7 +30,7 @@ $scroll: '.header--scroll';
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     border-bottom: 1px solid #FCAC10;
-    padding-bottom: 18px;
+    padding-bottom: 15px;
 
     @include table-big-screen {
       padding-bottom: 16px;
@@ -57,7 +57,7 @@ $scroll: '.header--scroll';
       left: 50%;
       display: block;
       width: 60px;
-      padding-top: 12px;
+      padding-top: 8px;
       text-align: center;
       background: #{$colorBlack};
       transform: translateX(-50%);
@@ -195,6 +195,7 @@ $scroll: '.header--scroll';
     @include trn(.15s);
     opacity: 0;
     visibility: hidden;
+    z-index: 100;
 
     @include table-large-screen {
       display: none;

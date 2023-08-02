@@ -1,5 +1,5 @@
 {
-  "name": "plonq",
+  "name": "candybrands",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -51,6 +51,5 @@
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1",
     "slick-slider": "^1.8.2"
-  },
-  "repository": "https://krasmag@bitbucket.org/plonq/sr-page.git"
+  }
 }

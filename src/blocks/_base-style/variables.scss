@@ -1,14 +1,17 @@
 // Fonts
 
 $mr: "Montserrat-Regular", sans-serif;
-$gpl: "GothamPro-Light", sans-serif;
-$gpm: "GothamPro-Medium", sans-serif;
-$gpb: "GothamPro-Bold", sans-serif;
+$mrm: "Montserrat-Medium", sans-serif;
+$br: "Broadway", sans-serif;
+$brn: "BroadwayNormal", sans-serif;
 
 // Colors
 
 $colorWhite: #ffffff;
 $colorBlack: #05020C;
+$orange: #FCAC10;
+$lightOrange: #FFD78A;
+$pink: #E5007E;
 
 
 @mixin placeholder {
@@ -46,4 +49,8 @@ $colorBlack: #05020C;
 
 @mixin tt($Xposition, $Yposition) {
   transform: translate($Xposition, $Yposition);
+}
+
+@function zoom($size) {
+  @return calc(#{$size} * var(--zoom));
 }
