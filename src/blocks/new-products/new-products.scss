@@ -5,6 +5,7 @@ $this: '.new-products';
 
 #{$this} {
   padding: zoom(30px) 0;
+  overflow: hidden;
 
   .heading {
     display: flex;
@@ -42,6 +43,7 @@ $this: '.new-products';
 
       &--next {
         margin-left: zoom(20px);
+        border: 1px solid $colorBlack;
         svg {
           transform: scale(-1);
         }
@@ -61,11 +63,6 @@ $this: '.new-products';
 
   .slick-slide {
     &:not(:last-child) {
-      //margin-right: 36px;
-      //
-      //@include mobile-large-screen {
-      //  margin-right: 30px;
-      //}
     }
   }
 
@@ -84,9 +81,8 @@ $this: '.new-products';
     border-radius: zoom(24px);
     border: 2px solid $colorBlack;
     margin: zoom(20px) 0;
-    @include trn(.15s);
-
     margin-right: 36px;
+    @include trn(.15s);
 
     @include mobile-large-screen {
       margin-right: 30px;

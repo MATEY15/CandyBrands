@@ -1,0 +1,118 @@
+@import "../../blocks/_base-style/variables";
+@import "../../blocks/_base-style/media-queries";
+
+$this: '.new-generation';
+
+#{$this} {
+  padding-top: 55px;
+  padding-bottom: 50px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__content {
+    h2 {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include universalScreen(920) {
+        font-size: 36px;
+      }
+      @include universalScreen(540) {
+        font-size: 28px;
+      }
+    }
+  }
+
+  &__content-text {
+    margin-top: zoom(44px);
+
+    @include universalScreen(1199) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    @include universalScreen(920) {
+      display: block;
+    }
+
+    #{$this}__image,
+    .image-border {
+      display: none;
+      margin: zoom(15px) zoom(20px) 0 0;
+
+      @include universalScreen(1199) {
+        display: inline-flex !important;
+      }
+    }
+  }
+
+  &__tagline {
+    @include universalScreen(1199) {
+      margin-left: 40px;
+    }
+    @include universalScreen(920) {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+    p {
+      font-size: zoom(20px);
+      line-height: 150%;
+      letter-spacing: zoom(0.2px);
+    }
+  }
+
+  &__content-text,
+  &__content-text p {
+    font-size: zoom(20px);
+    line-height: 150%;
+    letter-spacing: zoom(0.2px);
+  }
+
+  &__description {
+    font-size: zoom(36px);
+    line-height: zoom(48px);
+    letter-spacing: 1.44px;
+    max-width: zoom(630px);
+    margin-top: zoom(34px);
+    padding: zoom(12px) zoom(24px);
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-align: center;
+
+    @include universalScreen(1199) {
+      margin-top: 60px;
+    }
+    @include universalScreen(920) {
+      margin-top: 30px;
+    }
+    @include mobile-small-screen {
+      padding: 15px 0;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: zoom(36px);
+      line-height: zoom(48px);
+      letter-spacing: .5px;
+
+      @include mobile-small-screen {
+        font-size: 22px;
+        line-height: 150%;
+      }
+    }
+  }
+  &__image,
+  .image-border {
+    margin: zoom(15px) 0 0;
+
+    @include universalScreen(1199) {
+      display: none;
+    }
+  }
+}

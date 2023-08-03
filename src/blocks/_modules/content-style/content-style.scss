@@ -53,3 +53,47 @@
     }
   }
 }
+
+.image-border {
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  margin-bottom: zoom(22px);
+  margin-right: zoom(20px) !important;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    border-radius: zoom(28px);
+    overflow: hidden;
+    z-index: 10;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    left: zoom(19px);
+    top: zoom(22px);
+    content: '';
+    height: calc(100% - 8px);
+    width: calc(100% - 5px);
+    border: 3px solid $colorBlack;
+    border-radius: zoom(32px);
+  }
+
+  &--left {
+    margin-left: zoom(20px) !important;
+    margin-right: 0 !important;
+
+    &:after {
+      left: auto;
+      right: zoom(19px);
+    }
+  }
+
+}

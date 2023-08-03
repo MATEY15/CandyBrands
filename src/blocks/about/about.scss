@@ -1,0 +1,50 @@
+@import "../../blocks/_base-style/variables";
+@import "../../blocks/_base-style/media-queries";
+
+$this: '.about';
+
+#{$this} {
+  padding-top: 42px;
+  padding-bottom: 50px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .image-border {
+      margin-top: 14px;
+    }
+  }
+  &__image {}
+  &__content {
+    max-width: 627px;
+  }
+  &__content-text {
+    margin-top: zoom(50px);
+
+    p,
+    strong {
+      line-height: 36px;
+      //letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 150%;
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    strong {
+      font-size: 25px;
+      font-family: $br;
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0;
+    }
+
+  }
+}

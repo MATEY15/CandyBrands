@@ -46,6 +46,7 @@
   "dependencies": {
     "gsap": "^3.10.4",
     "imask": "^6.4.2",
+    "jquery.marquee": "^1.6.0",
     "magnific-popup": "^1.1.0",
     "node-nightly": "^1.8.1",
     "normalize.css": "^8.0.1",

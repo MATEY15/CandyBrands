@@ -1,0 +1,35 @@
+@import "../../blocks/_base-style/variables";
+@import "../../blocks/_base-style/media-queries";
+
+$this: '.brands';
+
+#{$this} {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h3 {
+      font-size: 54px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-gap: 20px 20px;
+  }
+  &__item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

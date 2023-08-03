@@ -6,7 +6,7 @@ $table-large-screen: (max-width: 1024px);
 $table-small-screen: (max-width: 768px);
 $mobile-big-screen: (max-width: 640px);
 $mobile-large-screen: (max-width: 600px);
-$mobile-small-screen: (max-width: 375px);
+$mobile-small-screen: (max-width: 480px);
 
 // universalScreen
 @mixin universalScreen($size) {
