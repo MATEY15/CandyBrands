@@ -118,25 +118,33 @@ window.addEventListener('load', (event) => {
 
 // Accordion
 function toggleAccordion() {
-    let $items = $('.accordion__item');
-    let descriptionClass = 'accordion__description';
-    let $descriptions = $('.' + descriptionClass);
-    let activeClass = 'accordion__item--active';
+    const $items = $('.accordion__item');
+    if($items) {
+        init();
+    }
 
-    $items.on('click', function () {
-        let $item = $(this);
-        let $description = $item.find('.' + descriptionClass);
+    function init() {
+        const descriptionClass = 'accordion__description';
+        const $descriptions = $('.' + descriptionClass);
+        const activeClass = 'accordion__item--active';
+        const speed = 250;
 
-        if ($item.hasClass(activeClass)) {
-            $descriptions.slideUp();
-            $items.removeClass(activeClass);
-        } else {
-            $descriptions.slideUp();
-            $description.slideDown();
-            $items.removeClass(activeClass);
-            $item.addClass(activeClass);
-        }
-    });
+
+        $items.on('click', function () {
+            let $item = $(this);
+            let $description = $item.find('.' + descriptionClass);
+
+            if ($item.hasClass(activeClass)) {
+                $descriptions.slideUp(speed);
+                $items.removeClass(activeClass);
+            } else {
+                $descriptions.slideUp(speed);
+                $description.slideDown(speed);
+                $items.removeClass(activeClass);
+                $item.addClass(activeClass);
+            }
+        });
+    }
 }
 
 

@@ -4,10 +4,11 @@
 $this: '.heading';
 
 #{$this} {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   user-select: none;
+
   h1, h2 {
     @include universalScreen(920) {
       font-size: 36px;
@@ -16,18 +17,48 @@ $this: '.heading';
       font-size: 28px;
     }
   }
+
+  &--h1 {
+    * {
+      font-size: 68px;
+      letter-spacing: .7px;
+      line-height: 138%;
+
+      @include universalScreen(920) {
+        font-size: 36px;
+      }
+      @include universalScreen(540) {
+        font-size: 28px;
+      }
+    }
+  }
+  &--h2 {
+    h1, h2, h3, h4, h5, h6 {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: zoom(56px);
+      letter-spacing: 0.56px;
+      line-height: 140%;
+    }
+  }
+  &--h3 {}
+
+  .icon-heading {
+    margin-right: 25px;
+    width: auto;
+
+    @include universalScreen(920) {
+      max-height: 37px;
+      margin-right: 16px;
+    }
+    @include universalScreen(540) {
+      max-height: 24px;
+      margin-right: 10px;
+    }
+  }
+
 }
-//.icon-heading {
-//  margin-right: 25px;
-//  @include universalScreen(920) {
-//    max-height: 37px;
-//    width: auto;
-//  }
-//  @include universalScreen(540) {
-//    max-height: 24px;
-//    margin-right: 10px;
-//  }
-//}
 
 .title-block {
   display: flex;

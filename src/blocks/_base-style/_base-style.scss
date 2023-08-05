@@ -88,6 +88,12 @@ h2, .h2-style {
   }
 }
 
+h4, .h4-style {
+  font-size: 36px;
+  line-height: 133.333%;
+  letter-spacing: 1.44px;
+}
+
 p {
   line-height: 145%;
   color: $colorBlack;
@@ -133,4 +139,24 @@ img {
 .navigation-arrow,
 .icon-arrow-rotate {
   fill: $colorBlack;
+}
+
+// Icon rotate
+
+.icon-rotate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: zoom(60px);
+  height: zoom(60px);
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid $colorBlack;
+  box-shadow: 0 0 0 zoom(4px) #fff;
+  @include trn(.15s);
+
+  svg {
+    width: zoom(39px);
+    height: zoom(39px);
+  }
 }

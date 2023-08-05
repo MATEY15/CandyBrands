@@ -1,0 +1,65 @@
+@import "../_base-style/variables";
+@import "../_base-style/media-queries";
+
+$this: '.question';
+
+#{$this} {
+  padding-top: 62px;
+  padding-bottom: 50px;
+
+  .heading {
+  }
+
+  .accordion {
+    &__item {
+      border-bottom: 1px solid #000000;
+
+      .icon-rotate {
+        position: absolute;
+        top: 21px;
+        right: 6px;
+        width: 56px;
+        height: 56px;
+        @include trn(.15s);
+
+        svg {
+          height: zoom(26px);
+          width: zoom(26px);
+          transform: scale(-1);
+          @include trn(.15s);
+        }
+      }
+
+      &--active {
+        .icon-rotate {
+          background: $orange;
+          box-shadow: 0 0 0 zoom(4px) $orange;
+          svg {
+            transform: scale(1) !important;
+          }
+        }
+      }
+    }
+
+    &__title {
+      position: relative;
+      font-family: $br;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 1.2px;
+      cursor: pointer;
+      padding: 29px 65px 36px 0;
+    }
+
+    &__description {
+      padding-bottom: 20px;
+      p {
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+}

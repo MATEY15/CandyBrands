@@ -66,4 +66,12 @@ button {
     }
   }
 
+  &--white {
+    border: 1px solid $colorBlack;
+
+    &:hover {
+      border: 1px solid $orange;
+    }
+  }
+
 }
