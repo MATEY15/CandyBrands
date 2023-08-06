@@ -5,6 +5,7 @@ $this: '.contact';
 
 #{$this} {
   padding-top: 54px;
+  padding-bottom: 128px;
 
   &__wrapper {
     display: flex;
@@ -63,14 +64,21 @@ $this: '.contact';
     width: 100%;
     border-radius: 28px;
     background: $colorBlack;
-    padding: 56px 48px 68px;
+    padding: 58px 48px;
     margin-top: 14px;
 
     * {
       color: $colorWhite;
     }
 
-    .heading {
+    &-heading {
+      text-align: center;
+      margin-bottom: 20px;
+
+      h4 {
+        margin-bottom: 18px;
+      }
+
       p {
         font-size: 20px;
         line-height: 150%;
@@ -78,8 +86,50 @@ $this: '.contact';
       }
     }
 
-    &-heading {
-      text-align: center;
+  }
+
+  &__form {
+
+    &-item {
+      margin-bottom: 16px;
+
+      label {
+        display: block;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.2px;
+        color: #959595;
+        padding-left: 24px;
+        margin-bottom: 8px;
+      }
+
+      input, textarea {
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.2px;
+        padding: 11px 24px;
+        border-radius: 24px;
+        border: 1px solid $colorWhite;
+        width: 100%;
+        background: $colorBlack;
+        outline: none;
+      }
+
+      textarea {
+        min-height: 120px;
+      }
+    }
+
+    &-button {
+      margin-top: 38px;
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    .checkbox-button {
+      margin-top: 16px;
     }
 
   }

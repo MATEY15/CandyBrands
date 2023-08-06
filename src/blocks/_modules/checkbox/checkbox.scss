@@ -1,0 +1,65 @@
+@import "../../_base-style/variables";
+@import "../../_base-style/media-queries";
+
+$radioText: '.radio-button__text';
+$radioStatus: '.radio-button__status';
+$radioItemStatus: '.radio-item__status';
+$checkBoxText: '.checkbox-button__text';
+$checkBoxStatus: '.checkbox-button__status';
+$checkBoxItemStatus: '.checkbox-item__status';
+
+.checkbox-button {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+
+  &__input {
+    display: none;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + #{$checkBoxText} #{$checkBoxStatus}:before {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__status {
+    position: relative;
+    background: $colorBlack;
+    border: 3px solid $orange;
+    box-sizing: border-box;
+    border-radius: 4px;
+    min-width: 28px;
+    width: 28px;
+    height: 28px;
+    margin-right: 20px;
+
+    &:before {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      content: '';
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      background: #E5007E;
+      border-radius: 1px;
+      @include trn(.1s);
+      opacity: 0;
+    }
+  }
+}

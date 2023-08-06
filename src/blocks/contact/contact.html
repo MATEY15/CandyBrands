@@ -46,16 +46,41 @@
             </div>
         </div>
         <div class="contact__call">
-            <div class="heading">
-                <h4 class="contact__call-heading h4-style">Свяжитесь со мной</h4>
+            <div class="contact__call-heading">
+                <h4 class="h4-style">Свяжитесь со мной</h4>
                 <p>
-                    Оставьте свои контакты и мы свяжемся с Вами в течение 3-х рабочих дней
+                    Оставьте свои контакты и мы свяжемся с Вами <br>в течение 3-х рабочих дней
                 </p>
             </div>
             <form action="" class="contact__form">
-                <div class="contact__">
-
+                <div class="contact__form-item">
+                    <label>Имя</label>
+                    <input name="name" type="text" placeholder="Например, Иван">
                 </div>
+                <div class="contact__form-item">
+                    <label>Телефон</label>
+                    <input name="phone" type="text" placeholder="+7 (999) 999-99-99">
+                </div>
+                <div class="contact__form-item">
+                    <label>Почта</label>
+                    <input name="email" type="text" placeholder="email.test@mail.ru">
+                </div>
+                <div class="contact__form-item">
+                    <label>Комментарий</label>
+                    <textarea type="text" placeholder="Напишите здесь свой вопрос, чтобы мы смогли быстрее его решить (заменить)"></textarea>
+                </div>
+                <div class="contact__form-button">
+                    <button class="button button--medium button--yellow">Отправить</button>
+                </div>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="checkbox" required="" class="checkbox-button__input">
+                    <span class="checkbox-button__text">
+                            <span class="checkbox-button__status"></span>
+                            <span>
+                                Я соглашаюсь с <a href="#">условиями</a> и даю свое <a href="#">согласие на&nbsp;обработку</a> персональных данных
+                            </span>
+                        </span>
+                </label>
             </form>
         </div>
     </div>
