@@ -7,6 +7,7 @@ $this: '.footer';
   background: $colorBlack;
   color: $colorWhite;
   padding: 44px 0 80px;
+  overflow: hidden;
 
   * {
     font-size: 16px;
@@ -19,6 +20,10 @@ $this: '.footer';
     justify-content: space-between;
     padding-right: 100px;
     margin-top: 24px;
+
+    @include table-big-screen {
+      padding-right: 0;
+    }
   }
 
   &__description {
@@ -51,6 +56,17 @@ $this: '.footer';
         &:not(:last-child) {
           margin-bottom: 8px;
         }
+
+        a {
+          transition: all .2s ease-out;
+        }
+
+        &:hover {
+          a {
+            color: #959595;
+          }
+        }
+
       }
     }
   }

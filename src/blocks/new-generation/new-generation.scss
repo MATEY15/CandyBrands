@@ -7,16 +7,26 @@ $this: '.new-generation';
   padding-top: 55px;
   padding-bottom: 50px;
 
+  @include table-lg-screen {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   &__content {
+
+    @include table-lg-screen {
+      width: 100%;
+    }
+
     h2 {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
+      //display: flex;
+      //align-items: center;
+      //flex-wrap: wrap;
 
       @include universalScreen(920) {
         font-size: 36px;
@@ -30,10 +40,9 @@ $this: '.new-generation';
   &__content-text {
     margin-top: zoom(44px);
 
-    @include universalScreen(1199) {
+    @include table-lg-screen {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       margin-top: 30px;
     }
 
@@ -85,11 +94,15 @@ $this: '.new-generation';
     border-bottom: 1px solid #000;
     text-align: center;
 
-    @include universalScreen(1199) {
+    @include table-lg-screen {
       margin-top: 60px;
+      max-width: 100%;
     }
     @include universalScreen(920) {
       margin-top: 30px;
+    }
+    @include table-large-screen {
+      max-width: 100%;
     }
     @include mobile-small-screen {
       padding: 15px 0;

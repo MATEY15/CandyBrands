@@ -1,51 +1,95 @@
 @import "../../blocks/_base-style/variables";
 @import "../../blocks/_base-style/media-queries";
 
+.video-popup-block {
+  position: relative;
+  max-width: 1280px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+
+  .mfp-close {
+    color: $colorWhite;
+  }
+}
+.mfp-container {
+  padding: 0;
+}
+.mfp-bg {
+  background-color: transparent;
+}
+
 $this: '.video-preview';
 
 #{$this} {
   padding-top: 72px;
   padding-bottom: 50px;
+  overflow: hidden;
+
+  @include table-lg-screen {
+    padding-top: 50px;
+  }
+
+  @include table-sm-screen {
+    padding: 30px 0;
+  }
+
 
   &__marquee {
-    min-height: 81px;
+    min-height: zoom(81px);
+
+    @include table-small-screen {
+      min-height: 58px;
+    }
 
     &-item {
-      font-size: 32px;
-      line-height: 36px;
+      font-size: zoom(32px);
+      line-height: zoom(36px);
       letter-spacing: .4px;
       white-space: nowrap;
-      padding: 17px 0 20px;
+      padding: zoom(17px) 0 zoom(20px);
       border-top: 1px solid $colorBlack;
       border-bottom: 1px solid $colorBlack;
 
+      @include table-small-screen {
+        padding: 10px 0 12px;
+        font-size: 24px;
+      }
+
       span {
-        margin-right: 10px;
+        margin-right: zoom(10px);
 
         &:last-child {
-          margin-right: 20px;
+          margin-right: zoom(20px);
         }
       }
     }
 
     .icon-marquee {
       position: relative;
-      top: 4px;
-      width: 31px;
+      top: zoom(4px);
+      width: zoom(31px);
       height: auto;
-      margin-right: 10px;
+      margin-right: zoom(10px);
+
+      @include table-small-screen {
+        width: 24px;
+      }
     }
   }
 
   &__present {
     position: relative;
-    margin: 60px 0;
+    margin: zoom(60px) 0;
+
+    @include table-sm-screen {
+      margin: 30px 0;
+    }
   }
 
   &__present-image {
     width: 100%;
     position: relative;
-    border-radius: 28px;
+    border-radius: zoom(28px);
     overflow: hidden;
 
     img {
@@ -66,35 +110,78 @@ $this: '.video-preview';
     position: relative;
     display: inline-flex;
     background: url(/img/video/video-button.png);
-    min-width: 336px;
-    min-height: 100px;
-    border-radius: 300px;
+    min-width: zoom(336px);
+    min-height: zoom(100px);
+    border-radius: zoom(300px);
     border: 2px solid $colorWhite;
-    margin-right: 30px;
-    margin-top: 4px;
+    margin-right: zoom(30px);
+    margin-top: zoom(4px);
+
+    @include table-lg-screen {
+      margin-top: 10px;
+    }
+
+    @include table-sm-screen {
+      margin-top: 10px;
+      min-width: 250px;
+      min-height: 70px;
+    }
+
+    @include table-small-screen {
+      margin-top: 6px;
+      min-height: 60px;
+      min-width: 220px;
+    }
 
     span {
       position: absolute;
-      left: 9px;
+      left: zoom(9px);
       top: 50%;
       transform: translateY(-50%);
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 76px;
-      height: 76px;
+      width: zoom(76px);
+      height: zoom(76px);
       border-radius: 50%;
       background: #FFFFFF;
       border: 1px solid #05020c;
-      box-shadow: 0 0 0 4px #fff;
+      box-shadow: 0 0 0 zoom(4px) #fff;
       @include trn(.3s);
+
+      @include table-sm-screen {
+        width: 50px;
+        height: 50px;
+      }
+
+      @include table-small-screen {
+        height: 42px;
+        width: 42px;
+        left: 7px;
+      }
+
+      svg {
+        @include table-sm-screen {
+          max-width: 40px;
+        }
+        @include table-small-screen {
+          max-width: 30px;
+        }
+      }
     }
 
     &:hover {
       span {
         background: $orange;
-        transform: translate(236px, -50%);
+        transform: translate(zoom(236px), -50%);
         box-shadow: 0 0 0 4px $orange;
+
+        @include table-sm-screen {
+          transform: translate(180px, -50%);
+        }
+        @include table-small-screen {
+          transform: translate(159px,-50%);
+        }
       }
     }
 

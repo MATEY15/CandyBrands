@@ -83,8 +83,17 @@ h2, .h2-style {
   letter-spacing: 0.56px;
   line-height: 140%;
 
-  @include table-big-screen {
-    //font-size: 52px;
+  @include table-large-screen {
+    font-size: 38px;
+  }
+
+  .icon-heading {
+    position: relative;
+
+    @include table-large-screen {
+      top: 4px;
+      width: 30px;
+    }
   }
 }
 
@@ -195,3 +204,55 @@ input:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder {color:transparent;}
 input:-moz-placeholder,
 textarea:-moz-placeholder {color:transparent;}
+
+
+$inputWrapper: ".input-wrapper";
+#{$inputWrapper} {
+  position: relative;
+
+  &--error {
+
+    input {
+      border: 1px solid $pink;
+    }
+
+    #{$inputWrapper}__error {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+  &--warning {
+
+    input {
+      border: 1px solid $orange;
+    }
+
+    #{$inputWrapper}__error {
+      color: $orange;
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+  &__error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 24px;
+    color: $pink;
+    @include trn(.15s);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+* {
+  //outline: 1px solid #6fe6f0;
+}

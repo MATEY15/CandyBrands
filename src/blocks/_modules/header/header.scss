@@ -139,6 +139,8 @@ $scroll: '.header--scroll';
       justify-content: center;
 
       .arrow-bottom {
+        @include trn(.2s);
+
         @include table-big-screen {
           width: 8px;
           height: auto;
@@ -152,6 +154,11 @@ $scroll: '.header--scroll';
 
       li {
         &:hover {
+
+          .arrow-bottom {
+            transform: scale(-1);
+          }
+
           #{$this}__sub-menu {
             opacity: 1;
             visibility: visible;

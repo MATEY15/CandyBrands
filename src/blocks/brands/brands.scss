@@ -7,23 +7,53 @@ $this: '.brands';
   padding-top: 50px;
   padding-bottom: 50px;
 
+  @include table-lg-screen {
+    padding-top: 40px;
+  }
+
   &__heading {
     text-align: center;
     margin-bottom: 50px;
 
+    @include table-lg-screen {
+      margin-bottom: 40px;
+    }
+
     h3 {
       font-size: 54px;
+
+      @include table-lg-screen {
+        font-size: 36px;
+      }
+
+      @include mobile-large-screen {
+        font-size: 28px;
+      }
     }
   }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-gap: 20px 20px;
+
+    @include table-lg-screen {
+      grid-template-columns: repeat(3, minmax(180px, 200px));
+      justify-content: center;
+    }
+
+    @include mobile-large-screen {
+      grid-template-columns: repeat(2, minmax(160px, 180px));
+      grid-gap: 14px 14px;
+    }
   }
   &__item {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+
+    @include mobile-large-screen {
+      border-radius: 10px;
+    }
 
     img {
       display: block;

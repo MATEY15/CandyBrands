@@ -7,10 +7,25 @@ $this: '.about';
   padding-top: 42px;
   padding-bottom: 50px;
 
+  @include table-large-screen {
+    padding-top: 30px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+
+    @include table-large-screen {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 30px 30px;
+    }
+
+    @include table-sm-screen {
+      display: flex;
+      flex-direction: column-reverse;
+      grid-gap: 20px 20px;
+    }
 
     .image-border {
       margin-top: 14px;
@@ -18,10 +33,29 @@ $this: '.about';
   }
   &__image {}
   &__content {
-    max-width: 627px;
+    max-width: 660px;
+    padding-left: 30px;
+
+    @include table-lg-screen {
+      max-width: 560px;
+    }
+    @include table-large-screen {
+      padding-left: 0;
+      max-width: 100%;
+    }
+
+    .h2-style {
+      @include table-large-screen {
+        //font-size: 36px;
+      }
+    }
   }
   &__content-text {
     margin-top: zoom(50px);
+
+    @include table-large-screen {
+      margin-top: 20px;
+    }
 
     p,
     strong {
@@ -33,8 +67,12 @@ $this: '.about';
       font-size: 20px;
       line-height: 150%;
 
+      @include table-large-screen {
+        font-size: 18px;
+      }
+
       &:not(:first-child) {
-        margin-top: 20px;
+        margin-top: 21px;
       }
     }
 
@@ -44,6 +82,10 @@ $this: '.about';
       font-weight: normal;
       line-height: normal;
       letter-spacing: 0;
+
+      @include table-large-screen {
+        font-size: 18px;
+      }
     }
 
   }
