@@ -52,4 +52,7 @@ yarn.lock
 *.flv
 *.mov
 *.wmv
+*.mp4
+
+src/img/video/video.mp4
 
