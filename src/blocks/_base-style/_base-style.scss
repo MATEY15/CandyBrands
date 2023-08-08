@@ -101,6 +101,17 @@ h4, .h4-style {
   font-size: 36px;
   line-height: 133.333%;
   letter-spacing: 1.44px;
+
+  .icon-heading {
+    position: relative;
+    width: 30px;
+    top: 2px;
+
+    @include table-large-screen {
+      top: 4px;
+      width: 30px;
+    }
+  }
 }
 
 p {

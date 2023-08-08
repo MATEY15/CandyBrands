@@ -11,5 +11,13 @@ $this: '.catalog';
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 44px;
+    margin-bottom: 56px;
   }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-gap: 50px 64px;
+  }
+
 }
