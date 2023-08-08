@@ -1,0 +1,15 @@
+@import "../_base-style/variables";
+@import "../_base-style/media-queries";
+
+$this: '.catalog';
+
+#{$this} {
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 44px;
+  }
+}

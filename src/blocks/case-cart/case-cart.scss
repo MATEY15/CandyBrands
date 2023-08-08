@@ -10,17 +10,32 @@ $this: '.case-cart';
   @include table-lg-screen {
     padding-top: 50px;
   }
+  @include mobile-big-screen {
+    padding-bottom: 20px;
+  }
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 36px 36px;
+
+    @include table-large-screen {
+      grid-gap: 30px 30px;
+    }
+
+    @include mobile-big-screen {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 36px 36px;
+
+    @include table-large-screen {
+      grid-gap: 30px 30px;
+    }
   }
 
   &__preview {
@@ -42,8 +57,37 @@ $this: '.case-cart';
       background-size: zoom(460px);
     }
 
+    @include table-large-screen {
+      background-size: 35.15625vw;
+      min-height: 260px;
+    }
+
+    @include table-sm-screen {
+      min-height: 240px;
+      padding: 30px 20px;
+      border: 2px solid transparent;
+    }
+
+    @include table-small-screen {
+      min-height: 220px;
+    }
+
+    @include mobile-big-screen {
+      min-height: 240px;
+    }
+
     * {
       color: $colorWhite;
+    }
+
+    &--big {
+      @include mobile-big-screen {
+        min-height: 400px;
+        background-size: 270px;
+      }
+      @include mobile-small-screen {
+        background-size: 240px;
+      }
     }
 
     &--purple {
@@ -59,6 +103,10 @@ $this: '.case-cart';
     &:hover {
       border: 4px solid $pink;
       box-shadow: 2px 4px 12px 0px rgba(2, 4, 23, 0.24);
+
+      @include table-sm-screen {
+        border: 2px solid $pink;
+      }
 
       .icon-rotate {
         background: $orange;
@@ -77,6 +125,16 @@ $this: '.case-cart';
         width: 72px;
         height: 72px;
       }
+      @include table-sm-screen {
+        width: 54px;
+        height: 54px;
+      }
+
+      svg {
+        @include table-sm-screen {
+          width: 26px;
+        }
+      }
     }
   }
 
@@ -88,6 +146,12 @@ $this: '.case-cart';
     @include table-lg-screen {
       font-size: 48px;
     }
+    @include table-large-screen {
+      font-size: 36px;
+    }
+    @include table-small-screen {
+      font-size: 34px;
+    }
   }
   &__sub-title {
     font-size: 32px;
@@ -97,6 +161,12 @@ $this: '.case-cart';
 
     @include table-lg-screen {
       font-size: 26px;
+    }
+    @include table-large-screen {
+      font-size: 22px;
+    }
+    @include table-small-screen {
+      margin-bottom: 18px;
     }
   }
 

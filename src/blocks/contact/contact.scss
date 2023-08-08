@@ -7,13 +7,39 @@ $this: '.contact';
   padding-top: 54px;
   padding-bottom: 128px;
 
+  @include table-big-screen {
+    padding-top: 30px;
+    padding-bottom: 90px;
+  }
+
+  @include mobile-big-screen {
+    padding-bottom: 60px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include table-large-screen {
+      display: grid;
+      grid-template-columns: 400px 1fr;
+      grid-gap: 30px 30px;
+    }
+    @include table-sm-screen {
+      display: block;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px;
   }
 
   &__content {
     max-width: 450px;
+
+    @include table-sm-screen {
+      max-width: 100%;
+    }
 
     .heading {
       margin-bottom: 20px;
@@ -26,6 +52,16 @@ $this: '.contact';
       line-height: 150%;
       color: $colorBlack;
       letter-spacing: 0.2px;
+
+      @include table-big-screen {
+        font-size: 18px;
+      }
+
+      br {
+        @include table-large-screen {
+          display: none;
+        }
+      }
     }
 
     ul {
@@ -47,8 +83,18 @@ $this: '.contact';
   &__main {
     margin-top: 13px;
 
+    @include table-sm-screen {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      grid-gap: 10px 30px;
+    }
+
     &-item {
       margin-bottom: 23px;
+
+      @include table-big-screen {
+        margin-bottom: 20px;
+      }
     }
 
     h5 {
@@ -56,6 +102,11 @@ $this: '.contact';
       line-height: 133.3%;
       letter-spacing: 1.44px;
       margin-bottom: 13px;
+
+      @include table-big-screen {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -67,6 +118,22 @@ $this: '.contact';
     padding: 58px 48px;
     margin-top: 14px;
 
+    @include table-big-screen {
+      max-width: 640px;
+      padding: 58px 30px;
+    }
+
+    @include table-large-screen {
+      padding: 45px 30px;
+    }
+
+    @include table-sm-screen {
+      margin-top: 50px;
+    }
+    @include mobile-big-screen {
+      padding: 35px 20px;
+    }
+
     * {
       color: $colorWhite;
     }
@@ -77,12 +144,33 @@ $this: '.contact';
 
       h4 {
         margin-bottom: 18px;
+
+        @include table-large-screen {
+          font-size: 30px;
+        }
+        @include mobile-big-screen {
+          font-size: 26px;
+          margin-bottom: 14px;
+        }
       }
 
       p {
         font-size: 20px;
         line-height: 150%;
         letter-spacing: 0.2px;
+
+        @include table-large-screen {
+          font-size: 18px;
+        }
+        @include mobile-big-screen {
+          font-size: 16px;
+        }
+
+        br {
+          @include table-sm-screen {
+            display: none;
+          }
+        }
       }
     }
 
@@ -101,6 +189,16 @@ $this: '.contact';
         color: #959595;
         padding-left: 24px;
         margin-bottom: 8px;
+
+        @include table-large-screen {
+          font-size: 18px;
+          padding-left: 20px;
+          margin-bottom: 6px;
+        }
+        @include mobile-big-screen {
+          font-size: 16px;
+          padding-left: 16px;
+        }
       }
 
       input, textarea {
@@ -113,15 +211,36 @@ $this: '.contact';
         width: 100%;
         background: $colorBlack;
         outline: none;
+
+        @include table-large-screen {
+          font-size: 18px;
+          padding: 10px 20px;
+        }
+        @include mobile-big-screen {
+          border-radius: 14px;
+          font-size: 16px;
+          padding-left: 16px;
+        }
+        @include mobile-small-screen {
+          line-height: 140%;
+        }
       }
 
       textarea {
         min-height: 120px;
+
+        @include table-large-screen {
+          min-height: 110px;
+        }
       }
     }
 
     &-button {
       margin-top: 38px;
+
+      @include table-large-screen {
+        margin-top: 20px;
+      }
 
       .button {
         width: 100%;

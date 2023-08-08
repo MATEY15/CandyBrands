@@ -13,8 +13,15 @@
 {% block content %}
 
     <main>
-        {#        {% include "./src/blocks/.html" %}#}
-        <h1>Katalog</h1>
+        <div class="breadcrumbs">
+            <div class="layout">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li>Каталог</li>
+                </ul>
+            </div>
+        </div>
+        {% include "./src/blocks/catalog/catalog.html" %}
     </main>
 
 {% endblock %}

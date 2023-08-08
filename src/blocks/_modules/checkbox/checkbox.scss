@@ -32,6 +32,13 @@ $checkBoxItemStatus: '.checkbox-item__status';
     letter-spacing: 0.2px;
     color: #FFFFFF;
 
+    @include table-large-screen {
+      font-size: 16px;
+    }
+    @include mobile-big-screen {
+      font-size: 14px;
+    }
+
     a {
       text-decoration: underline;
     }
@@ -48,6 +55,14 @@ $checkBoxItemStatus: '.checkbox-item__status';
     height: 28px;
     margin-right: 20px;
 
+    @include table-large-screen {
+      min-width: 24px;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $orange;
+      margin-right: 16px;
+    }
+
     &:before {
       position: absolute;
       top: 4px;
@@ -60,6 +75,11 @@ $checkBoxItemStatus: '.checkbox-item__status';
       border-radius: 1px;
       @include trn(.1s);
       opacity: 0;
+
+      @include table-large-screen {
+        width: 12px;
+        height: 12px;
+      }
     }
   }
 }

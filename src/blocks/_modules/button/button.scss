@@ -69,9 +69,11 @@ button {
 
   &--white {
     border: 1px solid $colorBlack;
+    color: $colorBlack;
 
     &:hover {
       border: 1px solid $orange;
+      background: $orange;
     }
   }
 
