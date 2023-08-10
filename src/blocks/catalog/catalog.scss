@@ -11,13 +11,29 @@ $this: '.catalog';
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 44px;
-    margin-bottom: 56px;
+    margin-bottom: 57px;
+
+    @include table-large-screen {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .h2-style {
+      @include table-large-screen {
+
+      }
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 260px 1fr;
     grid-gap: 50px 64px;
+    padding-bottom: 120px;
+
+    @include table-big-screen {
+      grid-gap: 50px 50px;
+    }
   }
 
 }

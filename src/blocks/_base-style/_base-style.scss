@@ -102,6 +102,10 @@ h4, .h4-style {
   line-height: 133.333%;
   letter-spacing: 1.44px;
 
+  @include table-large-screen {
+    font-size: 28px;
+  }
+
   .icon-heading {
     position: relative;
     width: 30px;
@@ -109,7 +113,7 @@ h4, .h4-style {
 
     @include table-large-screen {
       top: 4px;
-      width: 30px;
+      width: 24px;
     }
   }
 }

@@ -50,6 +50,7 @@
     "magnific-popup": "^1.1.0",
     "node-nightly": "^1.8.1",
     "normalize.css": "^8.0.1",
+    "page-scroll-to-id": "^1.6.8",
     "slick-carousel": "^1.8.1",
     "slick-slider": "^1.8.2"
   }

@@ -3,7 +3,120 @@
 
 $this: '.filter';
 
+.sticky {
+  position: fixed;
+  z-index: 101;
+}
+.stop {
+  position: relative;
+  z-index: 101;
+}
+
 #{$this} {
   max-width: 260px;
 
+  &__wrapper {
+    &.fixed {
+      position: fixed;
+      top: 0;
+      width: 260px;
+      padding: 20px 0;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+
+      @include table-large-screen {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__button {
+
+    .button {
+      min-width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__head {
+    position: relative;
+    font-family: $br;
+    font-size: 32px;
+    line-height: 112.5%;
+    padding: 4px 40px 13px 0;
+    border-bottom: 1px solid $colorBlack;
+    cursor: pointer;
+
+    @include table-large-screen {
+      font-size: 26px;
+    }
+
+    &--active {
+      .icon-rotate {
+        background: $orange !important;
+        box-shadow: 0 0 0 calc(4px*var(--zoom)) $orange !important;
+
+        svg {
+          transform: scale(1) !important;
+        }
+      }
+    }
+
+    .icon-rotate {
+      position: absolute;
+      top: 2px;
+      right: 3px;
+      width: 36px;
+      height: 36px;
+      background: $colorWhite;
+      box-shadow: 0 0 0 calc(4px*var(--zoom)) $colorWhite;
+      @include trn(.15s);
+
+      svg {
+        width: 15px;
+        transform: scale(-1);
+        @include trn(.15s);
+      }
+    }
+  }
+
+  &__body {
+    padding: 31px 0 30px;
+    display: none;
+
+    @include table-large-screen {
+      padding: 20px 0 20px;
+    }
+
+    .checkbox-button {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+
+        @include table-large-screen {
+          margin-bottom: 16px;
+        }
+      }
+
+      &__text {
+        @include table-large-screen {
+
+        }
+      }
+
+      &__status {
+        margin-right: 32px;
+
+        @include table-large-screen {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
 }

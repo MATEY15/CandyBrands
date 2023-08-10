@@ -1,15 +1,153 @@
-<div class="filter">
-    <div class="filter__item">
-        <div class="filter__head">
-            Бренд
-            <span class="icon-rotate">
-                <svg class="icon-arrow-rotate" width="39px" height="39px">
-                    <use xlink:href="/img/icons/sprites.svg#icon-arrow-rotate"></use>
-                </svg>
-            </span>
-        </div>
-        <div class="filter__body">
+{% set brand = [
+    {
+        name: "Кислица"
+    },
+    {
+        name: "Crazy Zombie"
+    },
+    {
+        name: "Моя принцесса"
+    },
+    {
+        name: "Boom Boss"
+    },
+    {
+        name: "Zebra"
+    },
+    {
+        name: "Sweet Coda"
+    },
+    {
+        name: "Другие"
+    }
+]%}
 
+{% set type = [
+    {
+        name: "Жевательная конфета"
+    },
+    {
+        name: "Жевательная резинка"
+    },
+    {
+        name: "Карамель"
+    },
+    {
+        name: "Шипучая карамель"
+    },
+    {
+        name: "Мармелад"
+    },
+    {
+        name: "Шоколадное драже"
+    },
+    {
+        name: "Сахарное драже"
+    },
+    {
+        name: "Жевательное драже"
+    },
+    {
+        name: "Сахарная пудра"
+    },
+    {
+        name: "Маршмэллоу"
+    },
+    {
+        name: "Жидкая карамель"
+    },
+    {
+        name: "Спреи"
+    },
+    {
+        name: "Другое"
+    }
+]%}
+
+{% set new = [
+    {
+        name: "Новинки"
+    },
+    {
+        name: "Скоро в продаже"
+    }
+]%}
+
+<div class="filter">
+    <div class="filter__wrapper">
+        <div class="filter__item">
+            <div class="filter__head">
+                Бренд
+                <span class="icon-rotate">
+                    <svg class="icon-arrow-rotate" width="39px" height="39px">
+                        <use xlink:href="/img/icons/sprites.svg#icon-arrow-rotate"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="filter__body">
+                {% for item in brand %}
+                <label class="checkbox-button checkbox-button--black">
+                    <input type="checkbox" name="checkbox" required="" class="checkbox-button__input">
+                    <span class="checkbox-button__text">
+                        <span class="checkbox-button__status"></span>
+                        <span>{{ item.name }}</span>
+                    </span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="filter__item">
+            <div class="filter__head">
+                Тип
+                <span class="icon-rotate">
+                    <svg class="icon-arrow-rotate" width="39px" height="39px">
+                        <use xlink:href="/img/icons/sprites.svg#icon-arrow-rotate"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="filter__body">
+                {% for item in type %}
+                <label class="checkbox-button checkbox-button--black">
+                    <input type="checkbox" name="checkbox" required="" class="checkbox-button__input">
+                    <span class="checkbox-button__text">
+                        <span class="checkbox-button__status"></span>
+                        <span>{{ item.name }}</span>
+                    </span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="filter__item">
+            <div class="filter__head">
+                Новинки
+                <span class="icon-rotate">
+                    <svg class="icon-arrow-rotate" width="39px" height="39px">
+                        <use xlink:href="/img/icons/sprites.svg#icon-arrow-rotate"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="filter__body">
+                {% for item in new %}
+                <label class="checkbox-button checkbox-button--black">
+                    <input type="checkbox" name="checkbox" required="" class="checkbox-button__input">
+                    <span class="checkbox-button__text">
+                        <span class="checkbox-button__status"></span>
+                        <span>{{ item.name }}</span>
+                    </span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="filter__item">
+            <div class="filter__button">
+                <a href="#" class="button button--medium button--yellow clear-filter">Сбросить фильтры</a>
+            </div>
+            <div class="filter__button">
+                <a href="#header" class="button button--medium button--white scrollToId">Наверх</a>
+            </div>
         </div>
     </div>
 </div>

@@ -1,15 +1,17 @@
 <div class="product">
     <div class="product__category">
-        <h3 class="h4-style">
-            <img class="icon-heading" src="/img/icons/icon-cl.svg" alt="">
-            Кислица
-        </h3>
+        <div class="product__heading">
+            <h3 class="h4-style">
+                <img class="icon-heading" src="/img/icons/icon-cl.svg" alt="">
+                Кислица
+            </h3>
+        </div>
         <div class="product__wrapper">
-            {% for i in range(0, 9) %}
+            {% for i in range(0, 6) %}
             <div class="product__item">
                 <div class="product__top">
                     <span class="product__label">Новинка</span>
-                    <a href="#" class="prod">
+                    <a href="#" class="product__image">
                         <img src="/img/product/product-1.png" alt="Жевательная резинка">
                     </a>
                 </div>
@@ -21,6 +23,39 @@
                 </div>
             </div>
             {% endfor %}
+        </div>
+        <div class="product__button">
+            <a href="#" class="button button--medium button--yellow">Показать еще</a>
+        </div>
+    </div>
+
+    <div class="product__category">
+        <div class="product__heading">
+            <h3 class="h4-style">
+                <img class="icon-heading" src="/img/icons/icon-cl.svg" alt="">
+                Crazy Zombie
+            </h3>
+        </div>
+        <div class="product__wrapper">
+            {% for i in range(0, 6) %}
+            <div class="product__item">
+                <div class="product__top">
+                    <span class="product__label">Новинка</span>
+                    <a href="#" class="product__image">
+                        <img src="/img/product/product-1.png" alt="Жевательная резинка">
+                    </a>
+                </div>
+                <div class="product__bottom">
+                    <div class="product__article">Арт. 00000</div>
+                    <a href="#" class="product__name">
+                        Карамель на палочке с шипучей карамелью
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="product__button">
+            <a href="#" class="button button--medium button--yellow">Показать еще</a>
         </div>
     </div>
 </div>
