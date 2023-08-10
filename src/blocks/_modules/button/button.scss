@@ -56,6 +56,11 @@ button {
       min-height: 46px;
       min-width: 290px;
     }
+    @include table-sm-screen {
+      font-size: 16px;
+      min-height: 45px;
+      min-width: 260px;
+    }
   }
 
   &--yellow {

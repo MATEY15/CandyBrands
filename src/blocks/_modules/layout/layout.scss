@@ -8,6 +8,10 @@
   margin-left: auto;
   margin-right: auto;
 
+  @include mobile-large-screen {
+    width: calc(100% - 30px);
+  }
+
   &--big {
     max-width: 1220px;
   }

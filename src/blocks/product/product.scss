@@ -18,11 +18,22 @@ $this: '.product';
     @include table-large-screen {
       grid-template-columns: repeat(2, 1fr);
     }
+    @include table-sm-screen {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include table-small-screen {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px 10px;
+    }
   }
 
   &__category {
     &:not(:last-child) {
       margin-bottom: 80px;
+
+      @include mobile-large-screen {
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -45,6 +56,9 @@ $this: '.product';
 
     @include table-big-screen {
       border-radius: 16px;
+    }
+    @include mobile-large-screen {
+      border-radius: 10px;
     }
   }
 
@@ -73,6 +87,17 @@ $this: '.product';
       top: 15px;
       left: 15px;
     }
+    @include mobile-large-screen {
+      top: 10px;
+      left: 10px;
+      font-size: 14px;
+      border-radius: 8px;
+    }
+    @include mobile-small-screen {
+      top: 4px;
+      left: 4px;
+    }
+
   }
 
   &__image {
@@ -84,6 +109,10 @@ $this: '.product';
 
   &__bottom {
     padding: 15px 20px 24px;
+
+    @include mobile-large-screen {
+      padding: 15px 15px 20px;
+    }
   }
 
   &__article {
@@ -94,6 +123,9 @@ $this: '.product';
 
     @include table-big-screen {
       font-size: 16px;
+    }
+    @include mobile-large-screen {
+      font-size: 14px;
     }
   }
 
@@ -108,6 +140,12 @@ $this: '.product';
 
     @include table-big-screen {
       font-size: 22px;
+    }
+    @include mobile-large-screen {
+      font-size: 18px;
+    }
+    @include mobile-small-screen {
+      font-size: 15px;
     }
   }
 

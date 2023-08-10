@@ -288,3 +288,21 @@ $inputWrapper: ".input-wrapper";
     }
   }
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(100vh + 100px);
+  background: rgba(0, 0, 0, 0.15);
+  @include trn(.15s);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

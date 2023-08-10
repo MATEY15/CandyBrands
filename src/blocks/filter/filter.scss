@@ -15,11 +15,46 @@ $this: '.filter';
 #{$this} {
   max-width: 260px;
 
+  @include table-sm-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 300px;
+    width: 300px;
+    background: #fff;
+    padding: 30px 20px;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: scroll;
+    transform: translateX(-300px);
+    @include trn(.2s);
+  }
+
+  &--active {
+    @include table-sm-screen {
+      transform: translateX(0);
+    }
+  }
+
+  .sticky {
+    @include table-sm-screen {
+      position: relative !important;
+      top: auto !important;
+      bottom: auto !important;
+      padding-bottom: 30px !important;
+    }
+  }
+  .stop {
+    @include table-sm-screen {
+      //top: auto !important;
+    }
+  }
+
   &__wrapper {
     &.fixed {
       position: fixed;
       top: 0;
-      width: 260px;
+      width: 300px;
       padding: 20px 0;
     }
   }

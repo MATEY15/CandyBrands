@@ -54,102 +54,52 @@ function filterFixed() {
     }
 
     function init() {
-        let positionFilter = $filterWrapper.offsetTop
-
-        window.addEventListener("scroll", function(e) {
-            checkFilterPosition();
-        });
-
-        checkFilterPosition();
-
-        function checkFilterPosition() {
-
-            if(window.scrollY >= positionFilter) {
-                $filterWrapper.classList.add('fixed');
+        let a = document.querySelector('.filter__wrapper'), b = null, P = 30;
+        window.addEventListener('scroll', Ascroll, false);
+        document.body.addEventListener('scroll', Ascroll, false);
+        function Ascroll() {
+            if (b == null) {
+                let Sa = getComputedStyle(a, ''), s = '';
+                for (let i = 0; i < Sa.length; i++) {
+                    if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+                        s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
+                    }
+                }
+                b = document.createElement('div');
+                b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+                a.insertBefore(b, a.firstChild);
+                let l = a.childNodes.length;
+                for (let i = 1; i < l; i++) {
+                    b.appendChild(a.childNodes[1]);
+                }
+                a.style.height = b.getBoundingClientRect().height + 'px';
+                a.style.padding = '0';
+                a.style.border = '0';
+            }
+            let Ra = a.getBoundingClientRect(),
+                R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.footer').getBoundingClientRect().top + 30);
+            if ((Ra.top - P) <= 0) {
+                if ((Ra.top - P) <= R) {
+                    b.className = 'stop';
+                    b.style.top = - R +'px';
+                } else {
+                    b.className = 'sticky';
+                    b.style.top = P + 'px';
+                }
             } else {
-                $filterWrapper.classList.remove('fixed');
+                b.className = '';
+                b.style.top = '';
             }
-
-            window.addEventListener('resize', function(){
-                clearTimeout(window.resizedFinished);
-                window.resizedFinished = setTimeout(function(){
-                    resizeWindow()
-                }, 250);
-            });
-
-            resizeWindow()
-            function resizeWindow() {
-                let viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
-
-                console.log(window.scrollY)
-                console.log(positionFilter)
-
-                // if (viewportWidth > 1024) {
-                //     if ($(window).scrollTop() > heightHeaderPlonqX) {
-                //         $headerPlonqX.classList.add(headerPlonqXScroll);
-                //     } else {
-                //         $headerPlonqX.classList.remove(headerPlonqXScroll);
-                //     }
-                // }
-                // if (viewportWidth <= 1024) {
-                //     if ($(window).scrollTop() > $firstBlock.offsetHeight) {
-                //         $headerPlonqX.classList.add(headerPlonqXScroll);
-                //     } else {
-                //         $headerPlonqX.classList.remove(headerPlonqXScroll);
-                //     }
-                // }
-            }
+            window.addEventListener('resize', function() {
+                a.children[0].style.width = getComputedStyle(a, '').width
+            }, false);
         }
+        Ascroll();
     }
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    // filterFixed()
-});
+filterFixed()
 
-(function(){
-    let a = document.querySelector('.filter__wrapper'), b = null, P = 30;
-    window.addEventListener('scroll', Ascroll, false);
-    document.body.addEventListener('scroll', Ascroll, false);
-    function Ascroll() {
-        if (b == null) {
-            let Sa = getComputedStyle(a, ''), s = '';
-            for (let i = 0; i < Sa.length; i++) {
-                if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
-                    s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
-                }
-            }
-            b = document.createElement('div');
-            b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
-            a.insertBefore(b, a.firstChild);
-            let l = a.childNodes.length;
-            for (let i = 1; i < l; i++) {
-                b.appendChild(a.childNodes[1]);
-            }
-            a.style.height = b.getBoundingClientRect().height + 'px';
-            a.style.padding = '0';
-            a.style.border = '0';
-        }
-        let Ra = a.getBoundingClientRect(),
-            R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.footer').getBoundingClientRect().top + 30);
-        if ((Ra.top - P) <= 0) {
-            if ((Ra.top - P) <= R) {
-                b.className = 'stop';
-                b.style.top = - R +'px';
-            } else {
-                b.className = 'sticky';
-                b.style.top = P + 'px';
-            }
-        } else {
-            b.className = '';
-            b.style.top = '';
-        }
-        window.addEventListener('resize', function() {
-            a.children[0].style.width = getComputedStyle(a, '').width
-        }, false);
-    }
-    Ascroll();
-})()
 
 function clearFilters() {
     const $buttonClear = document.querySelector('.clear-filter');
