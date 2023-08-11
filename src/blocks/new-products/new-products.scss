@@ -18,6 +18,18 @@ $this: '.new-products';
     }
   }
 
+  &--similar {
+    margin-bottom: 70px;
+
+    @include table-large-screen {
+      margin-bottom: 40px;
+    }
+
+    #{$this}__slider {
+      margin-top: 36px;
+    }
+  }
+
   &__navigation {
     display: flex;
     margin-bottom: 4px;

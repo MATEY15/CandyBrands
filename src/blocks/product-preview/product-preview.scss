@@ -4,29 +4,66 @@
 $this: '.product-preview';
 
 #{$this} {
-
   margin-bottom: 90px;
+
+  @include table-large-screen {
+    margin-bottom: 30px;
+  }
+
+  &__head {
+    display: none;
+    margin-bottom: 30px;
+
+    @include table-sm-screen {
+      display: block;
+    }
+  }
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px 20px;
+    align-items: baseline;
+
+    @include table-sm-screen {
+      display: block;
+    }
   }
 
   &__slide-wrapper {
-    display: flex;
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-gap: 20px 10px;
+
+    @include table-large-screen {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include table-sm-screen {
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include mobile-big-screen {
+    }
+    @include mobile-large-screen {
+      flex-direction: column;
+    }
   }
 
   &__nav {
     max-width: 98px;
 
+    @include mobile-large-screen {
+      order: 2;
+      max-width: 100%;
+      display: flex !important;
+    }
+
     .slick-track {
       //padding: 0 5px;
     }
-
 
     .slick-slide {
 
@@ -61,6 +98,27 @@ $this: '.product-preview';
 
   &__slide-main {
     max-width: 522px;
+
+    @include mobile-large-screen {
+      order: 1;
+    }
+
+    @include table-large-screen {
+      max-width: 370px;
+    }
+    @include table-sm-screen {
+      //max-width: 100%;
+      max-width: calc(100% - 110px);
+      //width: calc(100% - 110px);
+      display: block;
+    }
+    @include mobile-large-screen {
+      max-width: 100%;
+    }
+
+    .slick-slider {
+      width: inherit;
+    }
   }
 
   &__slide {
@@ -82,6 +140,17 @@ $this: '.product-preview';
       padding: 43px 19px;
       border-radius: 24px;
       background: #F4F4F4;
+
+      @include table-large-screen {
+        padding: 40px 15px;
+      }
+
+      img {
+        max-width: 100%;
+        @include table-large-screen {
+          margin: 0 auto;
+        }
+      }
     }
   }
 
@@ -89,6 +158,7 @@ $this: '.product-preview';
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 48px;
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -97,14 +167,38 @@ $this: '.product-preview';
     transform: translateX(-8px);
     cursor: pointer;
 
+    @include mobile-large-screen {
+      transform: translateX(0);
+      margin-top: 24px;
+    }
+
     &--prev {
       margin-bottom: 8px;
+      @include mobile-large-screen {
+        margin-top: 24px;
+        margin-bottom: 0;
+        margin-right: 15px;
+      }
+      svg {
+        @include mobile-large-screen {
+          transform: rotate(-90deg);
+        }
+      }
     }
     &--next {
       margin-top: 8px;
 
+      @include mobile-large-screen {
+        margin-top: 24px;
+        margin-left: 15px;
+      }
+
       svg {
         transform: scale(-1);
+
+        @include mobile-large-screen {
+          transform: rotate(-90deg) scale(-1);
+        }
       }
     }
   }
@@ -114,6 +208,47 @@ $this: '.product-preview';
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px 44px;
     margin-top: 10px;
+    margin-left: 110px;
+
+    @include table-large-screen {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include table-sm-screen {
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 0;
+    }
+    @include mobile-large-screen {
+      order: 3;
+    }
+    @include mobile-small-screen {
+      grid-template-columns: 1fr;
+    }
+
+    &-img {
+      position: relative;
+      width: 52px;
+      min-width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 12px;
+      object-fit: cover;
+
+      @include table-large-screen {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
 
     &-item {
       display: flex;
@@ -121,8 +256,8 @@ $this: '.product-preview';
       font-size: 20px;
       line-height: 150%;
 
-      img {
-        margin-right: 12px;
+      @include table-large-screen {
+        font-size: 18px;
       }
     }
   }
@@ -132,16 +267,29 @@ $this: '.product-preview';
       max-width: 520px;
       margin-bottom: 30px;
 
+      @include table-sm-screen {
+        display: none;
+      }
+
       p {
         font-size: 20px;
         line-height: 150%;
         margin-bottom: 10px;
+
+        @include table-large-screen {
+          font-size: 18px;
+          margin-bottom: 8px;
+        }
       }
     }
     &-code {
       font-family: $br;
       font-size: 32px;
       line-height: 112.5%;
+
+      @include table-large-screen {
+        font-size: 22px;
+      }
     }
   }
 
@@ -150,6 +298,10 @@ $this: '.product-preview';
     line-height: 150%;
     max-width: 600px;
     margin-top: 20px;
+
+    @include table-large-screen {
+      font-size: 18px;
+    }
 
     &--active {
       dd {
@@ -180,18 +332,22 @@ $this: '.product-preview';
       font-size: 20px;
       line-height: 150%;
       margin-bottom: 8px;
+
+      @include table-large-screen {
+        font-size: 18px;
+      }
     }
     dd {
       font-size: 20px;
       line-height: 150%;
       letter-spacing: 0.2px;
-      //height: 62px;
-      //display: -webkit-box;
-      //-webkit-line-clamp: 2;
-      //-webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
       @include trn(.2s);
+
+      @include table-large-screen {
+        font-size: 18px;
+      }
     }
   }
 
@@ -203,16 +359,28 @@ $this: '.product-preview';
       font-size: 20px;
       margin-bottom: 21px;
 
+      @include table-large-screen {
+        font-size: 18px;
+      }
+
       strong {
         font-family: $br;
         font-size: 32px;
         line-height: 112.5%;
         margin-right: 20px;
+
+        @include table-large-screen {
+          font-size: 22px;
+        }
       }
       span {
         display: inline-block;
         margin-top: 8px;
         line-height: 30px;
+
+        @include table-large-screen {
+          margin-top: 0;
+        }
       }
     }
   }

@@ -10,11 +10,12 @@ function openDescription() {
         const $openDesc = $descWrapper.querySelector('.product-preview__desc-open');
         const $openDescContainer = $descWrapper.querySelector('dd');
         const $openDescContainerHeight = $openDescContainer.offsetHeight;
-        $openDesc.addEventListener('click', () => {
+        $openDesc.addEventListener('click', (e) => {
+            e.preventDefault();
             if ($descWrapper.classList.contains('product-preview__desc--active')) {
-                close()
+                close();
             } else {
-                open()
+                open();
             }
         })
 
@@ -26,10 +27,10 @@ function openDescription() {
         function close() {
             $descWrapper.classList.remove('product-preview__desc--active');
             $openDesc.classList.remove('product-preview__desc-open--active');
-            $openDescContainer.style.height = '62px';
+            $openDescContainer.style.height = '56px';
         }
 
-        close()
+        close();
 
     }
 
@@ -72,6 +73,51 @@ function sliderProduct() {
                 nextArrow: arrowNext,
                 swipeToSlide: true,
                 centerMode: true,
+                responsive: [
+                    {
+                        breakpoint: 1025,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 855,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 601,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            vertical: false,
+                            verticalSwiping: false,
+                        }
+                    },
+                    {
+                        breakpoint: 481,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            vertical: false,
+                            verticalSwiping: false,
+                            centerMode: false,
+                        }
+                    },
+                    {
+                        breakpoint: 415,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            vertical: false,
+                            verticalSwiping: false,
+                            centerMode: false,
+                        }
+                    }
+                ]
             });
         }
 
