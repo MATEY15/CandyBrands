@@ -8,6 +8,7 @@ $this: '.footer';
   color: $colorWhite;
   padding: 44px 0 80px;
   overflow: hidden;
+  border-radius: 28px 28px 0 0;
 
   @include table-lg-screen {
     padding: 40px 0;
@@ -75,7 +76,7 @@ $this: '.footer';
       grid-gap: 30px 30px;
     }
     @include universalScreen(414) {
-      display: block;
+      grid-gap: 24px 24px;
     }
   }
 

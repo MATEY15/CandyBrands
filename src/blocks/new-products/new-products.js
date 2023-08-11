@@ -1,4 +1,4 @@
-require('slick-slider');
+// require('slick-slider');
 
 function sliderTastes() {
     const $sliderMain = $('.new-products__slider');

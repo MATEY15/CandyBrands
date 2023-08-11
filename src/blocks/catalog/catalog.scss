@@ -34,11 +34,9 @@ $this: '.catalog';
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 44px;
     margin-bottom: 57px;
 
     @include table-large-screen {
-      margin-top: 20px;
       margin-bottom: 30px;
     }
 

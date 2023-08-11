@@ -7,7 +7,7 @@ function filter() {
     const filterHeadActiveClass = 'filter__head--active';
     const $filterBody = document.querySelectorAll('.filter__body');
     const filterBodyActiveClass = 'filter__body--active';
-    if($filterHead) {
+    if($filterHead.length) {
         init();
     }
     function init() {
@@ -54,7 +54,7 @@ function filterFixed() {
     }
 
     function init() {
-        let a = document.querySelector('.filter__wrapper'), b = null, P = 30;
+        let a = document.querySelector('.filter__scroll .filter__wrapper'), b = null, P = 30;
         window.addEventListener('scroll', Ascroll, false);
         document.body.addEventListener('scroll', Ascroll, false);
         function Ascroll() {

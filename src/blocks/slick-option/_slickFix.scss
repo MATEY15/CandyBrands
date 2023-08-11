@@ -6,3 +6,13 @@ $slick-arrow-color: black !default;
 .slick-slider {
   min-width: 0;
 }
+
+/*устанавливаем неактивными все слайды в слайдере кроме первого*/
+.product-preview__slide .product-preview__slide-item:not(:first-child) {
+  display: none;
+}
+
+/*устанавливаем все слайды в слайдере активными после инициализации slick-slider*/
+.product-preview__slide .slick-initialized .product-preview__slide-item {
+  display: block;
+}

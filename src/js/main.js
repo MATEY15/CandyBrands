@@ -1,8 +1,11 @@
 import '../scss/main.scss';
 import $ from "jquery";
+require('slick-slider');
 
 import '../pages/index.njk';
-import '../pages/katalog.njk';
+import '../pages/catalog.njk';
+import '../pages/catalog-error.njk';
+import '../pages/product-preview.njk';
 
 window.jQuery = $;
 window.$ = $;

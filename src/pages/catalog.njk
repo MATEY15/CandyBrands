@@ -1,0 +1,27 @@
+{# Title #}
+{% set title = '' %}
+{#{% set description = '' %}#}
+{#{% set keywords = '' %}#}
+
+{#Extends#}
+{% extends "./src/template/base.njk" %}
+
+{# Variables #}
+{% set catalog = 'true' %}
+
+{# Content BODY #}
+{% block content %}
+
+    <main>
+        <div class="breadcrumbs">
+            <div class="layout">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li>Каталог</li>
+                </ul>
+            </div>
+        </div>
+        {% include "./src/blocks/catalog/catalog.html" %}
+    </main>
+
+{% endblock %}

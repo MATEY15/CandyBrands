@@ -11,6 +11,10 @@
             </a>
         </div>
         {% include "../filter/filter.html" %}
-        {% include "../product/product.html" %}
+        {% if catalogError == 'true' %}
+            {% include "../product-error/product-error.html" %}
+        {% else %}
+            {% include "../product/product.html" %}
+        {% endif %}
     </div>
 </div>

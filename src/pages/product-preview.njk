@@ -1,0 +1,28 @@
+{# Title #}
+{% set title = '' %}
+{#{% set description = '' %}#}
+{#{% set keywords = '' %}#}
+
+{#Extends#}
+{% extends "./src/template/base.njk" %}
+
+{# Variables #}
+
+{# Content BODY #}
+{% block content %}
+
+    <main>
+        <div class="breadcrumbs">
+            <div class="layout">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/">Каталог</a></li>
+                    <li>Наименование товара</li>
+                </ul>
+            </div>
+        </div>
+        {% include "./src/blocks/product-preview/product-preview.html" %}
+        {% include "./src/blocks/new-products/new-products.html" %}
+    </main>
+
+{% endblock %}

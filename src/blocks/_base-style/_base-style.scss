@@ -269,7 +269,11 @@ $inputWrapper: ".input-wrapper";
 }
 
 .breadcrumbs {
-  padding: 33px 0 0;
+  padding: 33px 0 44px;
+
+  @include table-large-screen {
+    padding-bottom: 20px;
+  }
 
   ul {
     display: flex;
