@@ -87,6 +87,10 @@ h2, .h2-style {
     font-size: 38px;
   }
 
+  @include mobile-big-screen {
+    font-size: 32px;
+  }
+
   .icon-heading {
     position: relative;
 

@@ -15,7 +15,7 @@ function filter() {
             item.addEventListener('click', () => listen(item))
         })
 
-        setTimeout(() => {open($filterHead[0].closest('.filter__item'))},100);
+        setTimeout(() => {open($filterHead[0].closest('.filter__item'))},10);
 
         function listen(el) {
             const $filterItem = el.closest('.filter__item');
@@ -76,8 +76,14 @@ function filterFixed() {
                 a.style.padding = '0';
                 a.style.border = '0';
             }
+            const selectProduct = document.querySelector('.select-product')
+            const selectFooter = document.querySelector('.footer')
+            let offsetStop = null;
+            offsetStop = selectProduct ? selectProduct : selectFooter;
+
             let Ra = a.getBoundingClientRect(),
-                R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.footer').getBoundingClientRect().top + 30);
+                R = Math.round(Ra.top + b.getBoundingClientRect().height - offsetStop.getBoundingClientRect().top + 120);
+
             if ((Ra.top - P) <= 0) {
                 if ((Ra.top - P) <= R) {
                     b.className = 'stop';
@@ -94,7 +100,7 @@ function filterFixed() {
                 a.children[0].style.width = getComputedStyle(a, '').width
             }, false);
         }
-        Ascroll();
+        setTimeout(() => {Ascroll()}, 100)
     }
 }
 
