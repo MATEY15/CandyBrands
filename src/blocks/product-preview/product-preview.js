@@ -62,7 +62,7 @@ function sliderProduct() {
                 swipe: false
             });
             $('.product-preview__nav').slick({
-                slidesToShow: 3,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 asNavFor: '.product-preview__slide',
                 focusOnSelect: true,
@@ -72,7 +72,7 @@ function sliderProduct() {
                 prevArrow: arrowPrev,
                 nextArrow: arrowNext,
                 swipeToSlide: true,
-                centerMode: true,
+                // centerMode: true,
                 responsive: [
                     {
                         breakpoint: 1025,

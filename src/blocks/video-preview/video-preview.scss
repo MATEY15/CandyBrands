@@ -77,6 +77,56 @@ $this: '.video-preview';
     }
   }
 
+  &__main {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+
+    @include table-sm-screen {
+      max-width: calc(100% - 40px);
+    }
+    @include mobile-big-screen {
+      max-width: 100%;
+    }
+  }
+
+  &__main-wrapper {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 100;
+    background: $colorBlack;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50%) scale(.8);
+    transition: all .25s ease-out;
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-50%) scale(1);
+    }
+  }
+
+  &__main-close {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    z-index: 100;
+
+    @include table-sm-screen {
+      top: 10px;
+      right: 10px;
+    }
+
+    svg {
+      @include table-sm-screen {
+        width: 34px;
+        height: auto;
+      }
+    }
+  }
+
   &__present {
     position: relative;
     margin: zoom(60px) 0;
@@ -133,6 +183,23 @@ $this: '.video-preview';
       min-width: 220px;
     }
 
+    @include mobile-big-screen {
+      margin-top: 8px;
+      min-height: 50px;
+      min-width: 190px;
+      margin-right: 18px;
+      border: 1px solid #fff;
+    }
+
+    @include mobile-small-screen {
+      min-height: 38px;
+      min-width: 130px;
+    }
+
+    @include universalScreen(375) {
+      zoom: .9;
+    }
+
     span {
       position: absolute;
       left: zoom(9px);
@@ -160,12 +227,29 @@ $this: '.video-preview';
         left: 7px;
       }
 
+      @include mobile-big-screen {
+        height: 34px;
+        width: 34px;
+      }
+
+      @include mobile-small-screen {
+        height: 26px;
+        width: 26px;
+        left: 6px;
+      }
+
       svg {
         @include table-sm-screen {
           max-width: 40px;
         }
         @include table-small-screen {
           max-width: 30px;
+        }
+        @include mobile-big-screen {
+          width: 24px;
+        }
+        @include mobile-small-screen {
+          width: 18px;
         }
       }
     }
@@ -181,6 +265,12 @@ $this: '.video-preview';
         }
         @include table-small-screen {
           transform: translate(159px,-50%);
+        }
+        @include mobile-big-screen {
+          transform: translate(138px,-50%);
+        }
+        @include mobile-small-screen {
+          transform: translate(90px,-50%);
         }
       }
     }

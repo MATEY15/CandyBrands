@@ -11,6 +11,9 @@ $this: '.question';
     padding-bottom: 40px;
     padding-top: 40px;
   }
+  @include mobile-big-screen {
+    padding-top: 20px;
+  }
 
   .heading {
   }

@@ -11,6 +11,10 @@ $this: '.about';
     padding-top: 30px;
   }
 
+  @include mobile-big-screen {
+    padding-bottom: 20px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
