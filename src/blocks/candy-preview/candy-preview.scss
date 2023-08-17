@@ -35,6 +35,9 @@ $this: '.candy-preview';
     @include universalScreen(991) {
       padding-left: 0;
     }
+    @include mobile-large-screen {
+      width: 100%;
+    }
   }
 
   &__image {
@@ -51,7 +54,7 @@ $this: '.candy-preview';
     display: block;
 
     @include mobile-small-screen {
-      width: 317px;
+      width: 100%;
       height: auto;
       object-fit: inherit;
     }
@@ -80,13 +83,13 @@ $this: '.candy-preview';
       margin-top: -30px;
       padding: 20px;
       max-width: 100%;
+      width: 100%;
       min-height: auto;
     }
 
     @include mobile-small-screen {
-      max-width: 317px;
       margin-top: -62px;
-      padding: 12px 22px;
+      padding: 12px 22px 16px;
     }
 
     h1 {
@@ -135,7 +138,10 @@ $this: '.candy-preview';
       margin-top: 44px;
 
       @include mobile-small-screen {
-        margin-top: 6px;
+        display: flex;
+        max-width: 160px;
+        min-width: inherit;
+        margin: 8px auto 0;
         min-height: 22px;
         font-size: 15px;
       }

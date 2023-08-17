@@ -4,8 +4,8 @@
 $this: '.contact';
 
 #{$this} {
-  padding-top: 54px;
-  padding-bottom: 128px;
+  padding-top: 32px;
+  padding-bottom: 105px;
 
   @include table-big-screen {
     padding-top: 30px;
@@ -13,7 +13,7 @@ $this: '.contact';
   }
 
   @include mobile-big-screen {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 
   &__wrapper {

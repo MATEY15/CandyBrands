@@ -22,7 +22,8 @@ function openDescription() {
         function open() {
             $descWrapper.classList.add('product-preview__desc--active');
             $openDesc.classList.add('product-preview__desc-open--active');
-            $openDescContainer.style.height = $openDescContainerHeight + 'px';
+            // $openDescContainer.style.height = $openDescContainerHeight + 'px';
+            $openDescContainer.style.height = 'auto';
         }
         function close() {
             $descWrapper.classList.remove('product-preview__desc--active');

@@ -233,9 +233,10 @@ $this: '.product-preview';
     }
     @include mobile-large-screen {
       order: 3;
+      display: block;
     }
     @include mobile-small-screen {
-      grid-template-columns: 1fr;
+      //grid-template-columns: 1fr;
     }
 
     &-img {
@@ -272,6 +273,11 @@ $this: '.product-preview';
 
       @include table-large-screen {
         font-size: 18px;
+      }
+      &:not(:last-child) {
+        @include mobile-large-screen {
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -393,6 +399,8 @@ $this: '.product-preview';
         line-height: 30px;
 
         @include table-large-screen {
+          position: relative;
+          top: -2px;
           margin-top: 0;
         }
       }

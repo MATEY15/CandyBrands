@@ -7,11 +7,23 @@ $this: '.new-products';
   padding: zoom(30px) 0;
   overflow: hidden;
 
+  @include mobile-large-screen {
+    padding: 20px 0;
+  }
+
   .heading {
+    @include mobile-large-screen {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+  }
+
+  &__heading {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
 
     @include table-large-screen {
       align-items: center;
@@ -45,9 +57,13 @@ $this: '.new-products';
       width: zoom(48px);
       height: zoom(48px);
       border-radius: 50%;
-      border: 1px solid $colorWhite;
       background: $colorBlack;
+      border: 1px solid $colorBlack;
       cursor: pointer;
+
+      svg {
+        fill: $colorBlack;
+      }
 
       svg {
         fill: $colorWhite;
@@ -55,13 +71,13 @@ $this: '.new-products';
 
       &--next {
         margin-left: zoom(20px);
-        border: 1px solid $colorBlack;
+
         svg {
           transform: scale(-1);
         }
       }
 
-      &--prev {
+      &.slick-disabled {
         border: 1px solid $colorBlack;
         background: $colorWhite;
 
@@ -84,6 +100,10 @@ $this: '.new-products';
 
   &__slider {
     margin-top: zoom(50px);
+
+    @include mobile-large-screen {
+      margin-top: 20px;
+    }
   }
 
   &__item {

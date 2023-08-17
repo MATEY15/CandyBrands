@@ -106,21 +106,36 @@ $checkBoxItemStatus: '.checkbox-item__status';
 
     &:before {
       position: absolute;
-      top: 4px;
-      left: 4px;
       content: '';
-      width: 14px;
-      height: 14px;
-      margin-right: 4px;
-      background: #E5007E;
-      border-radius: 1px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(/img/icons/checked.svg);
+      background-color: $orange;
+      background-repeat: no-repeat;
+      background-position: center center;
       @include trn(.1s);
       opacity: 0;
-
-      @include table-large-screen {
-        width: 12px;
-        height: 12px;
-      }
     }
+
+    //&:before {
+    //  position: absolute;
+    //  top: 4px;
+    //  left: 4px;
+    //  content: '';
+    //  width: 14px;
+    //  height: 14px;
+    //  margin-right: 4px;
+    //  background: #E5007E;
+    //  border-radius: 1px;
+    //  @include trn(.1s);
+    //  opacity: 0;
+    //
+    //  @include table-large-screen {
+    //    width: 12px;
+    //    height: 12px;
+    //  }
+    //}
   }
 }

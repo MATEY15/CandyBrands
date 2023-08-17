@@ -4,12 +4,16 @@
 $this: '.new-generation';
 
 #{$this} {
-  padding-top: 55px;
+  padding-top: 38px;
   padding-bottom: 50px;
 
   @include table-lg-screen {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  @include mobile-large-screen {
+    padding-top: 16px;
+    padding-bottom: 20px;
   }
 
   &__wrapper {
@@ -48,6 +52,9 @@ $this: '.new-generation';
 
     @include universalScreen(920) {
       display: block;
+    }
+    @include mobile-large-screen {
+      margin-top: 20px;
     }
 
     #{$this}__image,

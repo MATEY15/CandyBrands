@@ -62,8 +62,10 @@ $this: '.heading';
 
 .title-block {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+
+  @include mobile-large-screen {
+
+  }
 
   .icon-heading {
     margin-right: 25px;
