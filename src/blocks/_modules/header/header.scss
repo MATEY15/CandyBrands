@@ -42,9 +42,6 @@ $scroll: '.header--scroll';
       justify-content: center;
     }
 
-    @include mobile-large-screen {
-      justify-content: inherit;
-    }
   }
 
   &__logo {
@@ -70,7 +67,7 @@ $scroll: '.header--scroll';
 
   &__burger {
     position: absolute;
-    right: 0;
+    left: 0;
     height: 26px;
     width: 26px;
     display: none;

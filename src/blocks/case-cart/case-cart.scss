@@ -110,6 +110,12 @@ $this: '.case-cart';
 
       .icon-rotate {
         background: $orange;
+      }
+    }
+
+    &:active {
+      .icon-rotate {
+        background: $orange;
         box-shadow: 0 0 0 calc(4px*var(--zoom)) #fcac10;
       }
     }

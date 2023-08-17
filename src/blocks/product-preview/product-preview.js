@@ -49,11 +49,12 @@ function sliderProduct() {
         const maxWidth = 768;
         // const sliderNavigate = document.querySelector('.new-products__navigation');
 
-        const arrowPrev = `<div class="product-preview__nav-button product-preview__nav-button--prev"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M9 16L9 3.83L14.59 9.42L16 8L8 1.04907e-06L1.04907e-06 8L1.41 9.41L7 3.83L7 16L9 16Z" fill="white"/> </svg> </div>`;
-        const arrowNext = `<div class="product-preview__nav-button product-preview__nav-button--next"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M9 16L9 3.83L14.59 9.42L16 8L8 1.04907e-06L1.04907e-06 8L1.41 9.41L7 3.83L7 16L9 16Z" fill="white"/> </svg> </div>`;
+        const arrowPrev = `<div class="product-preview__nav-button product-preview__nav-button--prev"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M9 16L9 3.83L14.59 9.42L16 8L8 1.04907e-06L1.04907e-06 8L1.41 9.41L7 3.83L7 16L9 16Z"/> </svg> </div>`;
+        const arrowNext = `<div class="product-preview__nav-button product-preview__nav-button--next"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M9 16L9 3.83L14.59 9.42L16 8L8 1.04907e-06L1.04907e-06 8L1.41 9.41L7 3.83L7 16L9 16Z"/> </svg> </div>`;
 
         function sliderProduct() {
             $('.product-preview__slide').slick({
+                infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
@@ -62,6 +63,7 @@ function sliderProduct() {
                 swipe: false
             });
             $('.product-preview__nav').slick({
+                infinite: false,
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 asNavFor: '.product-preview__slide',

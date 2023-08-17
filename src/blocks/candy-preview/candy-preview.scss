@@ -49,6 +49,13 @@ $this: '.candy-preview';
     height: 100%;
     object-fit: cover;
     display: block;
+
+    @include mobile-small-screen {
+      width: 317px;
+      height: auto;
+      object-fit: inherit;
+    }
+
   }
 
   &__content {
@@ -76,6 +83,12 @@ $this: '.candy-preview';
       min-height: auto;
     }
 
+    @include mobile-small-screen {
+      max-width: 317px;
+      margin-top: -62px;
+      padding: 12px 22px;
+    }
+
     h1 {
       color: $colorWhite;
       font-size: 68px;
@@ -87,6 +100,11 @@ $this: '.candy-preview';
       }
       @include mobile-large-screen {
         font-size: 40px;
+      }
+      @include mobile-small-screen {
+        font-size: 25px;
+        line-height: normal;
+        letter-spacing: -0.5px;
       }
 
       span {
@@ -103,11 +121,24 @@ $this: '.candy-preview';
       @include universalScreen(1199) {
         font-size: 16px;
       }
+      @include mobile-small-screen {
+        font-size: 9px;
+        line-height: 150%;
+        letter-spacing: 0.09px;
+        margin-top: 4px;
+        max-width: 265px;
+      }
     }
 
     .button {
       width: 100%;
       margin-top: 44px;
+
+      @include mobile-small-screen {
+        margin-top: 6px;
+        min-height: 22px;
+        font-size: 15px;
+      }
     }
 
   }

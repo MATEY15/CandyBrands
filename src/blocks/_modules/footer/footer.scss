@@ -33,7 +33,7 @@ $this: '.footer';
   &__body {
     display: flex;
     justify-content: space-between;
-    padding-right: 100px;
+    padding-right: 105px;
     margin-top: 24px;
 
     @include table-big-screen {
@@ -103,7 +103,7 @@ $this: '.footer';
     }
 
     &:last-child {
-      margin-left: 125px;
+      margin-left: 130px;
 
       @include table-big-screen {
         margin-left: 0;

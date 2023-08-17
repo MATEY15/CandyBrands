@@ -2,7 +2,11 @@
     <div class="candy-preview__wrapper layout">
         <div class="candy-preview__image-wrapper">
             <div class="candy-preview__image">
-                <img src="../img/candy-preview/candy-preview-1x.png" alt="Candy Preview" class="candy-preview__img">
+                <picture>
+                    <source type="image/png" media="(max-width: 480px)" srcset="../img/candy-preview/candy-preview-mobile-1x.png 1x, ../img/candy-preview/candy-preview-mobile-3x.png 3x">
+                    <source type="image/png" srcset="../img/candy-preview/candy-preview-1x.png 1x, ../img/candy-preview/candy-preview-3x.png 3x">
+                    <img src="../img/candy-preview/candy-preview-3x.png" width="1172" alt="Candy Preview" class="candy-preview__img">
+                </picture>
             </div>
         </div>
         <div class="candy-preview__content">

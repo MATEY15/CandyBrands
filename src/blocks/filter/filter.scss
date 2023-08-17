@@ -93,6 +93,12 @@ $this: '.filter';
       font-size: 26px;
     }
 
+    &:hover {
+      .icon-rotate {
+        background: $orange !important;
+      }
+    }
+
     &--active {
       .icon-rotate {
         background: $orange !important;

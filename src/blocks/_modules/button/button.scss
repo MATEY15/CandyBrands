@@ -70,6 +70,9 @@ button {
     &:hover {
       background: $lightOrange;
     }
+    &:active {
+      background: #FC8110;
+    }
   }
 
   &--white {
@@ -78,6 +81,9 @@ button {
 
     &:hover {
       border: 1px solid $orange;
+    }
+    &:active {
+      border: 1px solid $colorBlack;
       background: $orange;
     }
   }

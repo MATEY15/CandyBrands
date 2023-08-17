@@ -254,11 +254,16 @@ $this: '.video-preview';
       }
     }
 
+    &:active {
+      span {
+        box-shadow: 0 0 0 zoom(4px) $orange;
+      }
+    }
+
     &:hover {
       span {
         background: $orange;
         transform: translate(zoom(236px), -50%);
-        box-shadow: 0 0 0 4px $orange;
 
         @include table-sm-screen {
           transform: translate(180px, -50%);

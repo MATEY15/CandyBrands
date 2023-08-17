@@ -100,6 +100,12 @@ $this: '.new-products';
       margin-right: 30px;
     }
 
+    &:active {
+      #{$this}__arrow {
+        box-shadow: 0 0 0 zoom(4px) $orange;
+      }
+    }
+
     &:hover {
       border: 2px solid $pink;
       box-shadow: 2px 4px 12px 0px rgba(2, 4, 23, 0.24);
@@ -123,19 +129,24 @@ $this: '.new-products';
   }
 
   &__preview {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     position: relative;
+    border-radius: zoom(22px) zoom(22px) 0 0;
     min-height: zoom(360px);
+    padding: 30px 35px 10px;
 
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: zoom(24px) zoom(24px) 0 0;
-      overflow: hidden;
+      //position: absolute;
+      //top: 0;
+      //left: 0;
+      //width: 100%;
+      //height: 100%;
+      max-width: 100%;
+      width: auto;
+      //object-fit: cover;
+      //border-radius: zoom(22px) zoom(22px) 0 0;
+      //overflow: hidden;
     }
 
   }

@@ -40,7 +40,10 @@
                 </video>
             </div>
             <div class="video-preview__present-image">
-                <img src="/img/video/video-background.png" alt="Video">
+                <picture>
+                    <source type="image/png" srcset="/img/video/video-background-1x.png 1x, /img/video/video-background-3x.png 3x">
+                    <img src="/img/video/video-background-3x.png" width="1280" alt="Candy Preview">
+                </picture>
             </div>
             <div class="video-preview__button-wrapper">
 <!--                <a href="#video-popup" class="video-popup video-preview__button">-->

@@ -60,6 +60,12 @@ $this: '.question';
         }
       }
 
+      &:hover {
+        .icon-rotate {
+          background: $orange;
+        }
+      }
+
       &--active {
         .icon-rotate {
           background: $orange;
